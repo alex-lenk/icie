@@ -1,0 +1,84 @@
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+//@include font-size(16px);
+@mixin font-size($size) {
+  font-size: calculateRem($size);
+}
+
+//Альтернатива display none
+//@include hide-display;
+@mixin hide-display() {
+  position: absolute;
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+@mixin visible-display() {
+  opacity: 1;
+  width: auto;
+  height: auto;
+  overflow: visible;
+}
+
+//Очиститель потоков
+@mixin clearfix {
+  &:after {
+    display: table;
+    clear: both;
+    content: "";
+  }
+}
+
+@mixin transition($all,$ease) {
+  transition: $all .3s $ease;
+  @content;
+}
+
+@mixin hidePlaceholder {
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+  &::-webkit-input-placeholder {
+    @content;
+  }
+}
+
+//Truncate
+@mixin truncate($truncation-boundary) {
+  max-width: $truncation-boundary;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @content;
+}
+
+@mixin stitches-sprite($x: 0, $y: 0, $width: 0, $height: 0) {
+  background-position: $x $y;
+  width: $width;
+  height: $height;
+}
+
+@mixin GeometriaMedium {
+  font-family: 'Geometria-Medium', Helvetica, Arial, sans-serif;
+}
+
+@mixin GeometriaMediumItalic {
+  font-family: 'Geometria-MediumItalic', Helvetica, Arial, sans-serif;
+}
+
+@mixin GeometriaBold {
+  font-family: 'Geometria-Bold', Helvetica, Arial, sans-serif;
+  font-weight: normal;
+}

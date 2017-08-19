@@ -1,0 +1,39 @@
+.review {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.review-head {
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    a {
+        font-weight: 600;
+        @include font-size(20px);
+    }
+}
+
+.review-title {
+    padding: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+}
+
+.review-item {
+    padding-left: 58px;
+    position: relative;
+    .quote {
+        width: 34px;
+        height: 31px;
+        top: -9px;
+        left: 13px;
+        fill: #cacaca;
+        position: absolute;
+        transform: rotateZ(180deg);
+    }
+}
+
+.review-name {
+    margin-top: 10px;
+    text-align: right;
+}

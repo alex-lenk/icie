@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="12px" viewBox="0 0 16 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.1 (44463) - http://www.bohemiancoding.com/sketch -->
+    <title>arrow-long</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="XL" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home-XL" transform="translate(-1387.000000, -626.000000)" fill-rule="nonzero" fill="#1E201D">
+            <g id="Header" transform="translate(-171.000000, -365.000000)">
+                <g id="Right-AI" transform="translate(1275.000000, 588.000000)">
+                    <g id="Button" transform="translate(154.000000, 399.000000)">
+                        <g id="right-arrow" transform="translate(129.000000, 4.000000)">
+                            <path d="M10.6025,0.5035 C10.388,0.2815 10.031,0.2815 9.809,0.5035 C9.5945,0.718 9.5945,1.075 9.809,1.289 L13.8325,5.3125 L0.5555,5.3125 C0.246,5.313 0,5.559 0,5.8685 C0,6.178 0.246,6.432 0.5555,6.432 L13.8325,6.432 L9.809,10.448 C9.5945,10.67 9.5945,11.0275 9.809,11.2415 C10.031,11.4635 10.3885,11.4635 10.6025,11.2415 L15.5785,6.2655 C15.8005,6.051 15.8005,5.694 15.5785,5.48 L10.6025,0.5035 Z" id="arrow-long"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

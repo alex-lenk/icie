@@ -1,0 +1,56 @@
+@import "mixin";
+
+.hide-placeholder {
+    @include hidePlaceholder {
+        opacity: 1;
+        color: #888;
+        font-size: 16px;
+        transition: opacity 0.3s ease;
+    }
+    &:focus {
+        @include hidePlaceholder {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+    }
+}
+
+.ui-group {
+    margin-bottom: 15px;
+}
+
+.ui-field {
+    width: 100%;
+    height: 40px;
+    padding: 0 20px;
+    border: 1px solid #e5e5e5;
+    display: block;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #333;
+    font-weight: 400;
+    transition: all .3s ease;
+    @include font-size(16px);
+    &:focus, &:active {
+        border-color: #6ba0b2;
+    }
+}
+
+textarea.ui-field {
+    height: 130px;
+    padding-top: 15px;
+    resize: none;
+    overflow: hidden;
+}
+
+.vericode {
+    display: flex;
+    align-items: center;
+    img {
+        margin-right: 30px;
+    }
+}
+
+.requiredValue {
+    border: 1px solid #ff0000;
+}

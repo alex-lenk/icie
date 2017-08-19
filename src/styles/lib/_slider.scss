@@ -1,0 +1,42 @@
+/* ==========================================================================
+    Slider core styles
+===========================================================================*/
+
+.slider {
+    position: relative;
+    width: 9999px;
+}
+
+.slider:before,
+.slider:after {
+    display: table;
+    content: ' ';
+}
+
+.slider:after {
+    clear: both;
+}
+
+.slider__item {
+    position: relative;
+    float: left;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+
+.slider.has-touch {
+    cursor: move;
+    cursor: -webkit-grabbing;
+    cursor: -moz-grabbing;
+}
+
+@media (max-width: 580px) {
+    .slider__switch {
+        display: none;
+    }
+    .slider__caption {
+        display: none;
+    }
+}

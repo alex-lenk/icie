@@ -1,0 +1,91 @@
+.special-offer {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.special-offer-title {
+    padding: 0;
+    margin-bottom: 20px;
+    color: $green;
+}
+
+.special-offer-text {
+    margin-bottom: 20px;
+    font-weight: 600;
+    @include font-size(20px);
+}
+
+.special-offer-info {
+    height: 200px;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.special-offer-sign {
+    margin-top: auto;
+    margin-bottom: 15px;
+    color: $white;
+    font-weight: 600;
+    @include font-size(18px);
+}
+
+.special-offer-free {
+    color: $yellow;
+    font-weight: 600;
+    text-transform: uppercase;
+    @include font-size(36px);
+}
+
+.special-offer-btn {
+    width: 100%;
+    height: 40px;
+    margin-top: auto;
+    background-color: $mainColor;
+    color: $white;
+    border-top: 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    position: relative;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:after {
+        width: 100%;
+        height: 0;
+        bottom: 0;
+        left: 0;
+        background-color: $white;
+        content: '';
+        position: absolute;
+        transition: all 0.3s;
+    }
+    span {
+        position: relative;
+        z-index: 2;
+    }
+    .more {
+        width: 22px;
+        height: 22px;
+        margin-right: 15px;
+        fill: $yellow;
+        position: relative;
+        z-index: 2;
+        transition: all 0.3s ease;
+    }
+    &:hover {
+        color: $mainColor;
+        &:after {
+            height: 100%;
+        }
+        .more {
+            fill: $mainColor;
+        }
+    }
+}

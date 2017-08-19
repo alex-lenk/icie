@@ -1,0 +1,126 @@
+footer {
+    padding-top: 190px;
+    color: #d9f2ff;
+    position: relative;
+    &::before, &::after {
+        width: 100%;
+        height: 210px;
+        left: 0;
+        position: absolute;
+        content: '';
+    }
+    &::before {
+        top: 0;
+        background: url(../img/decor-footer.png) no-repeat bottom center;
+        z-index: 5;
+    }
+    &::after {
+        top: -20px;
+        z-index: 4;
+        background: #ffffff;
+        background: -moz-linear-gradient(top, #ffffff 0%, #d9f2ff 100%);
+        background: -webkit-linear-gradient(top, #ffffff 0%, #d9f2ff 100%);
+        background: linear-gradient(to bottom, #ffffff 0%, #d9f2ff 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#d9f2ff', GradientType=0);
+    }
+    a {
+        color: #d9f2ff;
+        &:hover {
+            color: $white;
+            svg {
+                fill: $white;
+            }
+        }
+    }
+}
+
+.footer-main {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: $mainColor;
+}
+
+.footer-link {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    li {
+        position: relative;
+        &:not(:last-child) {
+            margin-bottom: 5px;
+        }
+        a {
+            padding-left: 20px;
+            display: inline-block;
+        }
+    }
+    .arrow {
+        width: 12px;
+        height: 12px;
+        top: 4px;
+        left: 0;
+        fill: #d9f2ff;
+        position: absolute;
+    }
+}
+
+.link-active {
+    padding-left: 20px;
+    display: inline-block;
+    color: $yellow;
+    + .arrow {
+        fill: $yellow;
+    }
+}
+
+.footer-contacts {
+    svg {
+        width: 20px;
+        height: 20px;
+        fill: #d9f2ff;
+    }
+}
+
+.footer-contacts-phone {
+    display: flex;
+    align-items: center;
+    @include font-size(24px);
+    .phone-call {
+        margin-right: 17px;
+    }
+}
+
+.footer-contacts-schedule {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    .clock {
+        margin: 0 25px 0 2px;
+    }
+}
+
+.footer-contacts-address {
+    padding-left: 40px;
+    position: relative;
+    .location {
+        margin-top: -8px;
+        margin-right: 10px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+    }
+}
+
+.footer-panel {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: $green;
+    .row {
+        align-items: center;
+    }
+}
+
+.footer-panel-right img {
+    margin-left: 10px;
+}

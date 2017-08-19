@@ -1,0 +1,18 @@
+{
+  "name": "frontend-devil",
+  "version": "1.0.0",
+  "homepage": "http://artlenk.ru",
+  "authors": [
+    "Alex Lenk (artlenk.ru@gmail.com)"
+  ],
+  "description": "for html+js+css apps",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "3.*",
+    "normalize-css": "^7.0.0",
+    "slick-carousel": "^1.7.1"
+  }
+}
