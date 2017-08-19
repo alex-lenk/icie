@@ -2,8 +2,5 @@
 bower_components/
 node_modules/
 sources/
-bijouterie.iml
 build
-.DS_Store
-Would skip repository frontend/
 icie.iml
