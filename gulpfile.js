@@ -60,7 +60,7 @@ var config = {
 
 gulp.task('svgstore', function () {
     return gulp
-        .src('./src/img/sprite/*.svg')
+        .src('./sources/sprite/*.svg')
         .pipe(svgmin(function (file) {
             var prefix = path.basename(file.relative, path.extname(file.relative));
             return {

@@ -22,7 +22,7 @@ body {
 }
 
 a, .as-link {
-    color: #0080ce;
+    color: #390050;
     text-decoration: none;
     transition: color 0.3s ease;
     &:hover {
@@ -35,6 +35,10 @@ a, .as-link {
 
 .as-link {
     cursor: pointer;
+}
+
+img {
+    max-width: 100%;
 }
 
 b, strong {

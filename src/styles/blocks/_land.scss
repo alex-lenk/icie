@@ -1,0 +1,187 @@
+.land {
+    margin-left: auto;
+    max-width: 405px;
+    width: 413px;
+    height: 419px;
+    margin-bottom: 110px;
+    background: url(../img/global-world.png) center 25px no-repeat;
+    background-size: 352px 316px;
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.land-link {
+    margin-top: auto;
+    text-transform: uppercase;
+    font-size: 17px;
+    color: #390050;
+    text-align: center;
+    @include SFProTextSemibold;
+    .arrow-long {
+        width: 15px;
+        height: 15px;
+        margin-left: 4px;
+        fill: #390050;
+    }
+}
+
+.land-list {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    li {
+        position: absolute;
+    }
+    svg {
+        width: 28px;
+        height: 20px;
+    }
+}
+
+.flag- {
+    &md {
+        bottom: 66px;
+        left: 179px;
+    }
+    &it {
+        top: 55px;
+        right: 95px;
+        svg {
+            background-color: #fff;
+        }
+    }
+    &by {
+        top: 97px;
+        right: 5px;
+    }
+    &ge {
+        top: 39%;
+        right: 33%;
+        svg {
+            background-color: #fff;
+        }
+    }
+    &gr {
+        top: 31%;
+        left: 0;
+    }
+    &hu {
+        top: 11%;
+        left: 10%;
+    }
+    &bg {
+        top: 23%;
+        left: 23%;
+        svg {
+            background-color: #fff;
+        }
+    }
+    &am {
+        top: 70%;
+        left: 9%;
+    }
+    &az {
+        top: 38%;
+        right: 56%;
+    }
+    &me {
+        top: 82%;
+        right: 65%;
+    }
+    &ee {
+        top: 19%;
+        right: 14%;
+        svg {
+            background-color: #fff;
+        }
+    }
+    &uz {
+        top: 66%;
+        right: 69%;
+        svg {
+            background-color: #fff;
+        }
+    }
+    &in {
+        top: 53%;
+        right: 65%;
+    }
+    &si {
+        bottom: 29%;
+        right: 18%;
+    }
+    &kz {
+        top: 49%;
+        left: 1%;
+    }
+    &tj {
+        bottom: 15%;
+        right: 5%;
+    }
+    &pl {
+        bottom: 42%;
+        right: 44%;
+        svg {
+            background-color: #fff;
+        }
+    }
+    &ua {
+        top: 40%;
+        left: 18%;
+    }
+    &cz {
+        top: 65%;
+        left: 56%;
+        svg {
+            background-color: #fff;
+        }
+    }
+    &ro {
+        top: 52%;
+        right: 19%;
+        svg {
+            width: 24px;
+            height: 16px;
+        }
+    }
+    &lv {
+        top: 31%;
+        left: 50%;
+        svg {
+            background-color: #fff;
+        }
+    }
+    &mk {
+        top: 0;
+        left: 36%;
+        svg {
+            width: 20px;
+            height: 18px;
+        }
+    }
+    &kg {
+        top: 11%;
+        left: 44%;
+    }
+    &ru {
+        top: 24%;
+        left: 68%;
+    }
+    &lt {
+        top: 4%;
+        right: 11%;
+    }
+    &rs {
+        bottom: 17%;
+        right: 28%;
+    }
+    &sk {
+        bottom: 59%;
+        right: 16%;
+    }
+    &cn {
+        bottom: 36%;
+        right: 3%;
+    }
+}

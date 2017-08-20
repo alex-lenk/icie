@@ -1,0 +1,120 @@
+.first-face {
+    display: flex;
+    background: #FFFFFF;
+    box-shadow: 0 5px 18px 0 rgba(0, 0, 0, 0.07);
+    border-radius: 1px;
+}
+
+.first-face-media {
+    width: 145px;
+    margin-right: 20px;
+    border-right: 1px solid #E1F5F2;
+    flex: 1 0 auto;
+}
+
+.first-face-content {
+    padding: 8px 20px 15px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.first-face-title {
+    margin: 0 0 7px;
+    padding: 0;
+    font-size: 17px;
+    color: #390050;
+    letter-spacing: 0;
+}
+
+.first-face-text {
+    line-height: 18px;
+    font-size: 15px;
+    color: #2F2732;
+    @include SFProTextLight
+}
+
+.read-more {
+    padding-right: 15px;
+    margin-left: auto;
+    margin-top: auto;
+    text-transform: uppercase;
+    font-size: 13px;
+    position: relative;
+    &::after {
+        width: 8px;
+        height: 8px;
+        margin-left: 10px;
+        border-left: 2px solid;
+        border-bottom: 2px solid;
+        transform: rotate(-135deg);
+        position: absolute;
+        right: 0;
+        top: 3px;
+        content: '';
+    }
+}
+
+.article-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.article-item {
+    width: calc(50% - 12px);
+}
+
+.article-media {
+    margin-bottom: 10px;
+    position: relative;
+    display: block;
+}
+
+.article-item-title {
+    font-size: 14px;
+    color: #390050;
+}
+
+.article-type-photo {
+    opacity: 0.9;
+    background: #867A8A;
+    border-radius: 2px;
+    position: absolute;
+    width: 55px;
+    height: 38px;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .photo {
+        width: 18px;
+        height: 18px;
+        fill: #fff;
+    }
+}
+
+.article-type-video {
+    opacity: 0.9;
+    background: #D8362A;
+    border-radius: 2px;
+    position: absolute;
+    width: 55px;
+    height: 38px;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &::before {
+        margin-right: -13px;
+        border: 10px solid transparent;
+        border-left: 18px solid #fff;
+        content: '';
+    }
+}

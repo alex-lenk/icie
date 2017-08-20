@@ -1,6 +1,11 @@
 .home-header {
     padding-top: 95px;
     color: #2F2732;
+}
+.header-panel {
+    margin-bottom: 90px;
+    position: relative;
+    z-index: 20;
     display: flex;
     align-items: center;
 }
@@ -9,7 +14,7 @@
     width: 161px;
 }
 
-.nav {
+.top-panel {
     height: 65px;
     padding: 0 27px 0 40px;
     margin-left: auto;
@@ -248,3 +253,39 @@
         pointer-events: auto;
     }
 }
+
+.header-info {
+    display: flex;
+}
+
+.header-content {
+    flex: 1 1 auto;
+}
+
+.header-content {
+    padding-top: 65px;
+    flex: 1 1 auto;
+    h1 {
+        margin-bottom: 7px;
+    }
+}
+
+h1 {
+    font-size: 34px;
+    line-height: 38px;
+    font-weight: normal;
+    @include SFProDisplayBold;
+}
+
+.header-title-sup {
+    margin-bottom: 26px;
+    font-size: 22px;
+    @include SFProDisplayMedium;
+}
+
+.header-text {
+    margin-bottom: 55px;
+    font-size: 17px;
+    @include SFProTextLight;
+}
+
