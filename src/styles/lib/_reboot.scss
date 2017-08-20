@@ -19,15 +19,6 @@ html {
     -webkit-tap-highlight-color: transparent;
 }
 
-body {
-    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    font-size: 1rem;
-    font-weight: normal;
-    line-height: 1.5;
-    color: #292b2c;
-    background-color: #fff;
-}
-
 [tabindex="-1"]:focus {
     outline: none !important;
 }
@@ -78,16 +69,6 @@ dd {
 
 blockquote {
     margin: 0 0 1rem;
-}
-
-a {
-    color: #0275d8;
-    text-decoration: none;
-}
-
-a:focus, a:hover {
-    color: #014c8c;
-    text-decoration: underline;
 }
 
 a:not([href]):not([tabindex]) {

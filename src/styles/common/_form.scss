@@ -3,9 +3,10 @@
 .hide-placeholder {
     @include hidePlaceholder {
         opacity: 1;
-        color: #888;
-        font-size: 16px;
+        font-size: 15px;
+        color: #867A8A;
         transition: opacity 0.3s ease;
+        @include SFProTextLight;
     }
     &:focus {
         @include hidePlaceholder {
@@ -27,7 +28,7 @@
     display: block;
     border-radius: 4px;
     background-color: #fff;
-    color: #333;
+    color: #2F2732;
     font-weight: 400;
     transition: all .3s ease;
     @include font-size(16px);
