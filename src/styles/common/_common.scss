@@ -8,8 +8,11 @@ html {
 html,
 body {
     width: 100%;
-    height: 100%;
-    background: #fff url(../img/bg-header.jpg) no-repeat top left;
+    background-image: url(../img/bg-header.jpg), url(../img/bg-body.jpg);
+    background-position: top left, right bottom;
+    background-size: contain, contain;
+    background-repeat: no-repeat;
+    background-color: #fff;
     color: #2F2732;
     line-height: 1.4;
     @include font-size(15px);
@@ -17,6 +20,7 @@ body {
 }
 
 body {
+    height: 100%;
     display: flex;
     flex-direction: column;
 }
