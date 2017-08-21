@@ -42,7 +42,8 @@ img {
 }
 
 b, strong {
-    font-weight: 600;
+    font-weight: normal;
+    @include SFProDisplayBold;
 }
 
 h2, h3, h4, h5 {
@@ -51,8 +52,8 @@ h2, h3, h4, h5 {
 
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
-    font-weight: bold;
-    color: $black;
+    font-weight: normal;
+    @include SFProDisplayBold;
 }
 
 h1 {
@@ -95,7 +96,8 @@ h6 {
         text-align: justify
     }
     &-bold {
-        font-weight: bold;
+        font-weight: normal;
+        @include SFProDisplayBold;
     }
     &-nowrap {
         white-space: nowrap;

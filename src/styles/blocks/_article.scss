@@ -41,17 +41,21 @@
     font-size: 13px;
     position: relative;
     &::after {
-        width: 8px;
-        height: 8px;
+        width: 7px;
+        height: 7px;
         margin-left: 10px;
         border-left: 2px solid;
         border-bottom: 2px solid;
         transform: rotate(-135deg);
         position: absolute;
         right: 0;
-        top: 3px;
+        top: 5px;
         content: '';
     }
+}
+
+.article {
+    margin-bottom: 98px;
 }
 
 .article-list {
