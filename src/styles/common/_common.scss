@@ -8,21 +8,20 @@ html {
 html,
 body {
     width: 100%;
-    background-image: url(../img/bg-header.jpg), url(../img/bg-body.jpg);
-    background-position: top left, right bottom;
-    background-size: contain, contain;
-    background-repeat: no-repeat;
-    background-color: #fff;
-    color: #2F2732;
-    line-height: 1.4;
-    @include font-size(15px);
-    @include SFProTextRegular;
 }
 
 body {
     height: 100%;
+    color: #2F2732;
+    line-height: 1.4;
+    background-image: url(../img/bg-header.jpg), url(../img/bg-body.jpg);
+    background-position: top center, right bottom;
+    background-repeat: no-repeat;
+    background-color: #fff;
     display: flex;
     flex-direction: column;
+    @include font-size(15px);
+    @include SFProTextRegular;
 }
 
 a, .as-link {
@@ -165,4 +164,10 @@ button, input, select, textarea {
 
 .bg-full {
     position: relative;
+}
+
+@include to('l') {
+    body {
+        background-position: 35% 0, right bottom;
+    }
 }

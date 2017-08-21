@@ -84,9 +84,12 @@
 }
 
 .our-project-list {
-    padding: 24px 29px 14px;
+    padding: 24px 29px 0;
     background: #F8F8F8;
     border-radius: 1px;
+    li:last-child {
+        border-bottom-width: 0;
+    }
 }
 
 .our-project-media {

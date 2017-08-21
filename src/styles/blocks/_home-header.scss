@@ -2,6 +2,7 @@
     padding-top: 95px;
     color: #2F2732;
 }
+
 .header-panel {
     margin-bottom: 90px;
     position: relative;
@@ -37,16 +38,6 @@
         height: inherit;
         line-height: 67px;
         position: relative;
-        &:not(:first-child):not(:last-child) {
-            margin-left: 25px;
-            margin-right: 25px;
-        }
-        &:first-child {
-            margin-right: 25px;
-        }
-        &:last-child {
-            margin-left: 25px;
-        }
         &:hover .dropdown-wrap {
             opacity: 1;
             pointer-events: auto;
@@ -117,7 +108,7 @@
 
 .search-top {
     height: 100%;
-    padding: 0 10px 0 100px;
+    padding-right: 10px;
     margin-left: auto;
     .search {
         width: 18px;
@@ -289,3 +280,38 @@ h1 {
     @include SFProTextLight;
 }
 
+@include from('xl') {
+    .menu > li {
+        &:not(:first-child):not(:last-child) {
+            margin-left: 25px;
+            margin-right: 25px;
+        }
+        &:first-child {
+            margin-right: 25px;
+        }
+        &:last-child {
+            margin-left: 25px;
+        }
+    }
+    .search-top {
+        padding-left: 100px;
+    }
+}
+
+@include to('l') {
+    .menu > li {
+        &:not(:first-child):not(:last-child) {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        &:first-child {
+            margin-right: 20px;
+        }
+        &:last-child {
+            margin-left: 20px;
+        }
+    }
+    .search-top {
+        padding-left: 47px;
+    }
+}
