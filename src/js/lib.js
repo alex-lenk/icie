@@ -4,6 +4,8 @@
 
 //= ../../bower_components/swiper/dist/js/swiper.jquery.min.js
 
+//= lib/truncateText
+
 // = lib/bootstrap.min.js
 
 // = lib/jquery.maskedinput.min.js

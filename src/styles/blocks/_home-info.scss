@@ -20,6 +20,7 @@
     margin: 0 auto;
     text-transform: uppercase;
     font-size: 15px;
+    align-self: center;
     @include SFProDisplayBold;
     &::after {
         margin-left: 6px;
@@ -41,24 +42,24 @@
     padding-bottom: 23px;
     border-bottom: 1px solid #E1F5F2;
     display: flex;
+    align-self: flex-start;
     &:not(:last-child) {
         margin-bottom: 32px;
     }
 }
 
 .last-news-media {
-    width: 147px;
-    height: 147px;
-    margin-right: 28px;
     border-radius: 1px;
     box-shadow: 0 5px 18px 0 rgba(0, 0, 0, 0.10);
     flex: 1 0 auto;
+    align-self: flex-start;
 }
 
 .last-news-title {
     padding: 0;
     margin: 0 0 7px;
     font-size: 17px;
+    line-height: 18px;
     @include SFProDisplayMedium;
 }
 
@@ -84,7 +85,6 @@
 }
 
 .our-project-list {
-    padding: 24px 29px 0;
     background: #F8F8F8;
     border-radius: 1px;
     li:last-child {
@@ -93,10 +93,6 @@
 }
 
 .our-project-media {
-    width: 230px;
-    height: 147px;
-    max-width: 230px;
-    margin-right: 28px;
     border-radius: 1px;
     box-shadow: 0 5px 18px 0 rgba(0, 0, 0, 0.10);
     flex: 1 0 auto;

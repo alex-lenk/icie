@@ -1,10 +1,10 @@
 .home-header {
-    padding-top: 95px;
+    padding-top: 65px;
     color: #2F2732;
 }
 
 .header-panel {
-    margin-bottom: 90px;
+    margin-bottom: 100px;
     position: relative;
     z-index: 20;
     display: flex;
@@ -52,7 +52,6 @@
 }
 
 .dropdown-link {
-    padding-right: 20px;
     position: relative;
     &::after {
         width: 8px;
@@ -118,9 +117,9 @@
 }
 
 .search-top-icon {
-    width: 18px;
+    width: 12px;
     height: 18px;
-    margin-top: 22px;
+    margin-top: 24px;
     position: relative;
     cursor: pointer;
     .search {
@@ -250,68 +249,20 @@
 }
 
 .header-content {
-    flex: 1 1 auto;
-}
-
-.header-content {
     padding-top: 65px;
     flex: 1 1 auto;
-    h1 {
-        margin-bottom: 7px;
-    }
 }
 
-h1 {
-    font-size: 34px;
-    line-height: 38px;
+.header-title {
     font-weight: normal;
     @include SFProDisplayBold;
 }
 
 .header-title-sup {
-    margin-bottom: 26px;
-    font-size: 22px;
     @include SFProDisplayMedium;
 }
 
 .header-text {
-    margin-bottom: 55px;
     font-size: 17px;
     @include SFProTextLight;
-}
-
-@include from('xl') {
-    .menu > li {
-        &:not(:first-child):not(:last-child) {
-            margin-left: 25px;
-            margin-right: 25px;
-        }
-        &:first-child {
-            margin-right: 25px;
-        }
-        &:last-child {
-            margin-left: 25px;
-        }
-    }
-    .search-top {
-        padding-left: 100px;
-    }
-}
-
-@include to('l') {
-    .menu > li {
-        &:not(:first-child):not(:last-child) {
-            margin-left: 20px;
-            margin-right: 20px;
-        }
-        &:first-child {
-            margin-right: 20px;
-        }
-        &:last-child {
-            margin-left: 20px;
-        }
-    }
-    .search-top {
-        padding-left: 47px;
-    }
 }

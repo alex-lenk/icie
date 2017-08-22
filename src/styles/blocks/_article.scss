@@ -1,4 +1,5 @@
 .first-face {
+    min-height: 210px;
     display: flex;
     background: #FFFFFF;
     box-shadow: 0 5px 18px 0 rgba(0, 0, 0, 0.07);
@@ -6,24 +7,24 @@
 }
 
 .first-face-media {
-    width: 145px;
+    width: 148px;
     margin-right: 20px;
     border-right: 1px solid #E1F5F2;
     flex: 1 0 auto;
 }
 
 .first-face-content {
-    padding: 8px 20px 15px 0;
+    padding: 13px 20px 15px 0;
     display: flex;
     flex-direction: column;
 }
 
 .first-face-title {
-    margin: 0 0 7px;
+    margin: 0 0 11px;
     padding: 0;
     font-size: 17px;
     color: #390050;
-    letter-spacing: 0;
+    line-height: 20px;
 }
 
 .first-face-text {
@@ -40,6 +41,7 @@
     text-transform: uppercase;
     font-size: 13px;
     position: relative;
+    align-self: flex-end;
     &::after {
         width: 7px;
         height: 7px;
@@ -55,7 +57,7 @@
 }
 
 .article {
-    margin-bottom: 98px;
+    margin-bottom: 105px;
 }
 
 .article-list {
@@ -76,6 +78,7 @@
 .article-item-title {
     font-size: 14px;
     color: #390050;
+    line-height: 17px;
 }
 
 .article-type-photo {

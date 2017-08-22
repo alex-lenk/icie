@@ -30,7 +30,7 @@ $(document).ready(function () {
         slidesPerView: 6,
         spaceBetween: 50,
         breakpoints: {
-            1024: {
+            1199: {
                 slidesPerView: 5,
                 spaceBetween: 40
             },
@@ -47,5 +47,9 @@ $(document).ready(function () {
                 spaceBetween: 10
             }
         }
-    })
+    });
+
+    $(function() {
+        $(".first-face-text").truncateText();
+    });
 });

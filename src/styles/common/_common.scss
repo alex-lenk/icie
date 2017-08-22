@@ -14,8 +14,6 @@ body {
     height: 100%;
     color: #2F2732;
     line-height: 1.4;
-    background-image: url(../img/bg-header.jpg), url(../img/bg-body.jpg);
-    background-position: top center, right bottom;
     background-repeat: no-repeat;
     background-color: #fff;
     display: flex;
@@ -166,8 +164,3 @@ button, input, select, textarea {
     position: relative;
 }
 
-@include to('l') {
-    body {
-        background-position: 35% 0, right bottom;
-    }
-}
