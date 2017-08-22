@@ -52,4 +52,11 @@ $(document).ready(function () {
     $(function() {
         $(".first-face-text").truncateText();
     });
+
+
+    $(".menu-toggle").click(
+        function () {
+            $('.menu-wrap').toggleClass("nav-opened");
+        }
+    );
 });

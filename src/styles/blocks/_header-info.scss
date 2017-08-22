@@ -1,0 +1,22 @@
+.header-info {
+    display: flex;
+}
+
+.header-content {
+    padding-top: 65px;
+    flex: 1 1 auto;
+}
+
+.header-title {
+    font-weight: normal;
+    @include SFProDisplayBold;
+}
+
+.header-title-sup {
+    @include SFProDisplayMedium;
+}
+
+.header-text {
+    font-size: 17px;
+    @include SFProTextLight;
+}
