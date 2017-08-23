@@ -24,7 +24,7 @@ $(document).ready(function () {
         }
     );
 
-    var swiper = new Swiper ('.swiper-container', {
+    var swiper = new Swiper('.swiper-container', {
         pagination: '.swiper-pagination',
         paginationClickable: true,
         slidesPerView: 6,
@@ -41,22 +41,24 @@ $(document).ready(function () {
             570: {
                 slidesPerView: 2,
                 spaceBetween: 20
-            },
-            320: {
-                slidesPerView: 1,
-                spaceBetween: 10
             }
         }
     });
 
-    $(function() {
+    $(function () {
         $(".first-face-text").truncateText();
     });
 
 
-    $(".menu-toggle").click(
+    $(".menu-toggle, .close-menu").click(
         function () {
             $('.menu-wrap').toggleClass("nav-opened");
+        }
+    );
+
+    $(".dropdown-item").click(
+        function () {
+            $(this).toggleClass("dropdown-item-opened");
         }
     );
 });

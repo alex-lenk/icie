@@ -1,6 +1,4 @@
 .header-panel {
-    position: relative;
-    z-index: 20;
     display: flex;
     align-items: center;
 }
@@ -15,7 +13,6 @@
     display: flex;
     align-items: center;
     color: #2F2732;
-    position: relative;
 }
 
 .menu {
@@ -60,7 +57,6 @@
 }
 
 .search-top-input {
-    width: 0;
     position: absolute;
     opacity: 0;
     pointer-events: none;
