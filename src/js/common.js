@@ -24,8 +24,7 @@ $(document).ready(function () {
         }
     );
 
-    var swiper = new Swiper('.swiper-container', {
-        pagination: '.swiper-pagination',
+    var swiper = new Swiper('.partners-carousel', {
         paginationClickable: true,
         slidesPerView: 6,
         spaceBetween: 50,
@@ -45,9 +44,29 @@ $(document).ready(function () {
         }
     });
 
-    $(function () {
-        $(".first-face-text").truncateText();
+    var swiper2 = new Swiper('.our-project-list', {
+        paginationClickable: true,
+        slidesPerView: 6,
+        spaceBetween: 50,
+        breakpoints: {
+            1199: {
+                slidesPerView: 5,
+                spaceBetween: 40
+            },
+            992: {
+                slidesPerView: 4,
+                spaceBetween: 30
+            },
+            570: {
+                slidesPerView: 2,
+                spaceBetween: 20
+            }
+        }
     });
+
+/*    $(function () {
+        $(".first-face-text").truncateText();
+    });*/
 
 
     $(".menu-toggle, .close-menu").click(
@@ -61,4 +80,6 @@ $(document).ready(function () {
             $(this).toggleClass("dropdown-item-opened");
         }
     );
+
+    $(".ellipsis").dotdotdot();
 });

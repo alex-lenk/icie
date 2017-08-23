@@ -60,10 +60,6 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
         margin-bottom: 110px;
     }
     
-    .header-panel {
-        margin-bottom: 135px;
-    }
-    
     .menu-wrap {
         order: 3;
         &:not(.nav-opened) .menu-toggle {
@@ -168,9 +164,6 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
         width: 125px;
         margin-right: 40px;
     }
-    .first-face-content {
-        padding-top: 26px;
-    }
     .first-face {
         min-height: 178px;
         margin-bottom: 47px;
@@ -261,20 +254,32 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
 }
 
 @include to('xs') {
+    body {
+        background: url(../img/bg/bg-xs@2x.jpg) center -50px no-repeat;
+        background-size: contain;
+        overflow-x: hidden;
+    }
+    
     .home-header {
+        margin-bottom: 218px;
         padding-top: 20px;
+    }
+    .header-panel {
+        margin-bottom: 87px;
+    }
+    .header-title-sup {
+        margin-bottom: 28px;
+        font-size: 18px;
+    }
+    .header-text {
+        line-height: 21px;
+        br {
+            display: none;
+        }
     }
     
     .logo {
         width: 125px;
-    }
-    
-    .menu-toggle {
-        width: 50px;
-        height: 50px;
-        &::before {
-            margin-left: -10px
-        }
     }
     .language-bar {
         margin-right: 5px;
@@ -301,15 +306,9 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
     .header-content {
         text-align: center;
     }
-    .first-face-text {
-        font-size: 14px;
-        margin-bottom: 10px;
-    }
     
-    .article-item:first-of-type {
-        margin-bottom: 35px;
-    }
     .home-info-title {
+        margin-bottom: 30px;
         padding-top: 12px;
         padding-bottom: 12px;
         text-align: center;
@@ -342,6 +341,13 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
         }
     }
     
+    .menu-toggle {
+        width: 50px;
+        height: 50px;
+        &::before {
+            margin-left: -10px
+        }
+    }
     .nav-wrap {
         width: 100%;
         height: 500px;
@@ -473,6 +479,63 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
         letter-spacing: -3px;
         content: '››';
     }
+    
+    .article {
+        margin-bottom: 69px;
+    }
+    .article-item:first-of-type {
+        margin-bottom: 35px;
+    }
+    .first-face {
+        margin-bottom: 0;
+        padding: 17px 10px 4px;
+        .read-more {
+            margin-left: 0;
+            margin-right: auto;
+        }
+    }
+    .first-face-media {
+        width: 100px;
+        margin-right: 13px;
+    }
+    
+    .first-face-title {
+        margin-top: -4px;
+        margin-bottom: 4px;
+        font-size: 16px;
+        @include SFProTextRegular;
+    }
+    .first-face-content {
+        padding-top: 0;
+        padding-right: 0;
+    }
+    .first-face-text {
+        height: 64px;
+        font-size: 14px;
+        margin-bottom: 16px;
+    }
+    
+    .article-media {
+        height: 164px;
+        overflow: hidden;
+    }
+    
+    .last-news-text {
+        margin-bottom: 15px;
+    }
+    .last-news-item {
+        padding-bottom: 13px;
+        &:not(:last-child) {
+            margin-bottom: 23px;
+        }
+    }
+    
+    .last-news {
+        margin-bottom: 20px;
+    }
+    .last-news-wrap {
+        margin-bottom: 57px;
+    }
 }
 
 @media (max-width: 374px) {
@@ -486,6 +549,10 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
 }
 
 @include between('sm', 'md') {
+    .header-panel {
+        margin-bottom: 135px;
+    }
+    
     .menu-wrap:not(.nav-opened) .menu {
         opacity: 0;
         pointer-events: none;
@@ -587,6 +654,10 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
     }
     .footer-contacts a {
         padding-left: 30px;
+    }
+    
+    .first-face-content {
+        padding-top: 26px;
     }
 }
 

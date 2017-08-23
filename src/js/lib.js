@@ -4,7 +4,9 @@
 
 //= ../../bower_components/swiper/dist/js/swiper.jquery.min.js
 
-//= lib/truncateText
+// = lib/truncateText
+
+//= lib/jquery.dotdotdot.min.js
 
 // = lib/bootstrap.min.js
 
