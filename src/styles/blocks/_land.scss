@@ -3,7 +3,7 @@
     max-width: 405px;
     width: 413px;
     height: 419px;
-    background: url(../img/global-world.png) center 25px no-repeat;
+    background: url(../img/global-world@2x.png) center 25px no-repeat;
     background-size: 352px 316px;
     flex: 1 0 auto;
     display: flex;
@@ -22,6 +22,12 @@
         height: 15px;
         margin-left: 4px;
         fill: #390050;
+        transition: fill 0.3s ease;
+    }
+    a:hover {
+        .arrow-long {
+            fill: #178ace;
+        }
     }
 }
 

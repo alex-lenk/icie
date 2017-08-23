@@ -248,97 +248,12 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
 }
 
 @include to('sm') {
-    .land {
-        display: none;
-    }
-}
-
-@include to('xs') {
     body {
-        background: url(../img/bg/bg-xs@2x.jpg) center -50px no-repeat;
-        background-size: contain;
         overflow-x: hidden;
     }
     
     .home-header {
-        margin-bottom: 218px;
-        padding-top: 20px;
-    }
-    .header-panel {
-        margin-bottom: 87px;
-    }
-    .header-title-sup {
-        margin-bottom: 28px;
-        font-size: 18px;
-    }
-    .header-text {
-        line-height: 21px;
-        br {
-            display: none;
-        }
-    }
-    
-    .logo {
-        width: 125px;
-    }
-    .language-bar {
-        margin-right: 5px;
-    }
-    .language-bar-current {
-        padding-right: 13px;
-        width: 55px;
-        margin-left: auto;
-        margin-right: auto;
-        &::after {
-            right: 0;
-        }
-    }
-    .search-top {
-        padding-right: 10px;
-    }
-    .search-top-input {
-        width: 100%;
-        max-width: calc(100% - 40px);
-        right: 20px;
-        top: 87px;
-    }
-    
-    .header-content {
-        text-align: center;
-    }
-    
-    .home-info-title {
-        margin-bottom: 30px;
-        padding-top: 12px;
-        padding-bottom: 12px;
-        text-align: center;
-        background-color: #E1F5F2;
-    }
-    .footer-left {
-        margin-bottom: 35px;
-        text-align: center;
-        .logo {
-            margin: 0 auto 25px;
-        }
-    }
-    .footer-left-text {
-        text-align: left;
-        display: inline-block;
-    }
-    .footer-contacts {
-        padding: 0;
-    }
-    .footer-contacts .phone {
-        left: -4px;
-    }
-    .footer-contacts a {
-        padding-left: 24px;
-    }
-    .footer-location {
-        margin-top: 24px;
-        span {
-            padding-left: 25px;
-        }
+        position: static;
     }
     
     .menu-toggle {
@@ -480,6 +395,98 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
         content: '››';
     }
     
+    .land {
+        display: none;
+    }
+}
+
+@include to('xs') {
+    body {
+        background: url(../img/bg/bg-xs@2x.jpg) center -50px no-repeat;
+        background-size: contain;
+    }
+    
+    .home-header {
+        margin-bottom: 218px;
+        padding-top: 20px;
+    }
+    .header-panel {
+        margin-bottom: 87px;
+    }
+    .header-title-sup {
+        margin-bottom: 28px;
+        font-size: 18px;
+    }
+    .header-text {
+        line-height: 21px;
+        br {
+            display: none;
+        }
+    }
+    
+    .logo {
+        width: 125px;
+    }
+    .language-bar {
+        margin-right: 5px;
+    }
+    .language-bar-current {
+        padding-right: 13px;
+        width: 55px;
+        margin-left: auto;
+        margin-right: auto;
+        &::after {
+            right: 0;
+        }
+    }
+    .search-top {
+        padding-right: 10px;
+    }
+    .search-top-input {
+        width: 100%;
+        max-width: calc(100% - 40px);
+        right: 20px;
+        top: 87px;
+    }
+    
+    .header-content {
+        text-align: center;
+    }
+    
+    .home-info-title {
+        margin-bottom: 30px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: center;
+        background-color: #E1F5F2;
+    }
+    .footer-left {
+        margin-bottom: 35px;
+        text-align: center;
+        .logo {
+            margin: 0 auto 25px;
+        }
+    }
+    .footer-left-text {
+        text-align: left;
+        display: inline-block;
+    }
+    .footer-contacts {
+        padding: 0;
+    }
+    .footer-contacts .phone {
+        left: -4px;
+    }
+    .footer-contacts a {
+        padding-left: 24px;
+    }
+    .footer-location {
+        margin-top: 24px;
+        span {
+            padding-left: 25px;
+        }
+    }
+    
     .article {
         margin-bottom: 69px;
     }
@@ -553,6 +560,47 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
         margin-bottom: 135px;
     }
     
+    .search-top {
+        padding-right: 30px;
+        position: relative;
+    }
+    .search-top-input {
+        top: 5px;
+    }
+    .search-top-opened .search-top-input {
+        width: 289px;
+    }
+    
+    .article-item {
+        width: calc(100% / 3 - 18px);
+    }
+    
+    .footer-contacts li:not(:first-child) {
+        text-align: center;
+    }
+    .footer-contacts a {
+        padding-left: 30px;
+    }
+    
+    .first-face-content {
+        padding-top: 26px;
+    }
+}
+
+@include at('md') {
+    .header-content {
+        max-width: 56%;
+        padding-top: 20px;
+    }
+    
+    .first-face-text {
+        width: 535px;
+        height: 60px;
+    }
+    
+    .nav-wrap {
+        position: relative;
+    }
     .menu-wrap:not(.nav-opened) .menu {
         opacity: 0;
         pointer-events: none;
@@ -565,6 +613,7 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
         top: 100%;
         right: 0;
         font-size: 18px;
+        z-index: 20;
         background-color: #fff;
         box-shadow: 0 5px 18px 0 rgba(0, 0, 0, 0.05);
         transition: opacity 0.3s ease;
@@ -632,44 +681,6 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
                 content: '››';
             }
         }
-    }
-    
-    .search-top {
-        padding-right: 30px;
-        position: relative;
-    }
-    .search-top-input {
-        top: 5px;
-    }
-    .search-top-opened .search-top-input {
-        width: 289px;
-    }
-    
-    .article-item {
-        width: calc(100% / 3 - 18px);
-    }
-    
-    .footer-contacts li:not(:first-child) {
-        text-align: center;
-    }
-    .footer-contacts a {
-        padding-left: 30px;
-    }
-    
-    .first-face-content {
-        padding-top: 26px;
-    }
-}
-
-@include at('md') {
-    .header-content {
-        max-width: 56%;
-        padding-top: 20px;
-    }
-    
-    .first-face-text {
-        width: 535px;
-        height: 60px;
     }
     
     .footer-menu {
@@ -846,6 +857,18 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
         }
     }
     
+    .header-panel {
+        position: relative;
+        z-index: 20;
+    }
+    
+    .top-panel {
+        position: relative;
+    }
+    .nav-head {
+        display: none;
+    }
+    
     .search-top {
         padding-right: 10px;
     }
@@ -919,22 +942,19 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
             margin-bottom: 35px;
         }
     }
+    
+    .last-news-text {
+        height: 74px;
+    }
 }
 
-@include from('sm') {
-    .header-panel {
-        position: relative;
-        z-index: 20;
-    }
-    
-    .top-panel {
-        position: relative;
-    }
-    
+@include from('md') {
     .nav-head {
         display: none;
     }
-    
+}
+
+@include from('sm') {
     .search-top-input {
         width: 0;
     }
