@@ -34,11 +34,11 @@ $(document).ready(function () {
                 slidesPerView: 5,
                 spaceBetween: 40
             },
-            768: {
-                slidesPerView: 3,
+            992: {
+                slidesPerView: 4,
                 spaceBetween: 30
             },
-            414: {
+            570: {
                 slidesPerView: 2,
                 spaceBetween: 20
             },

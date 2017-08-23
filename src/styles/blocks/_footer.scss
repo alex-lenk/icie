@@ -46,11 +46,7 @@ footer {
     line-height: 21px;
     @include SFProDisplayMedium;
     li {
-        padding-left: 30px;
         position: relative;
-        &:not(:last-child) {
-            margin-bottom: 35px;
-        }
     }
     a {
         color: #867A8A;
@@ -77,3 +73,4 @@ footer {
         height: 18px;
     }
 }
+

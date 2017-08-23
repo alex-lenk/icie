@@ -17,10 +17,8 @@
 }
 
 .home-info-all {
-    margin: 0 auto;
     text-transform: uppercase;
     font-size: 15px;
-    align-self: center;
     @include SFProDisplayBold;
     &::after {
         margin-left: 6px;
@@ -32,10 +30,6 @@
         font-size: 21px;
         @include SFProTextRegular;
     }
-}
-
-.last-news {
-    margin-bottom: 20px;
 }
 
 .last-news-item {

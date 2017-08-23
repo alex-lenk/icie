@@ -1,5 +1,4 @@
 .first-face {
-    min-height: 210px;
     display: flex;
     background: #FFFFFF;
     box-shadow: 0 5px 18px 0 rgba(0, 0, 0, 0.07);
@@ -7,10 +6,9 @@
 }
 
 .first-face-media {
-    width: 148px;
-    margin-right: 20px;
     border-right: 1px solid #E1F5F2;
     flex: 1 0 auto;
+    align-self: flex-start;
 }
 
 .first-face-content {
@@ -56,17 +54,9 @@
     }
 }
 
-.article {
-    margin-bottom: 105px;
-}
-
 .article-list {
     display: flex;
     justify-content: space-between;
-}
-
-.article-item {
-    width: calc(50% - 12px);
 }
 
 .article-media {
