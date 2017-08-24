@@ -87,4 +87,9 @@ $(document).ready(function () {
     }
     /* END */
 
+    $('.grid').masonry({
+        // options
+        itemSelector: '.grid-item'
+    });
+
 });

@@ -1,0 +1,65 @@
+.grid {
+    display: flex;
+}
+
+.grid-item {
+    padding: 10px 20px 20px;
+}
+
+.grid-item-wrap {
+    width: 100%;
+    padding: 16px 10px 16px 16px;
+    background: #fff;
+    position: relative;
+    box-shadow: 0 5px 18px rgba(#000, .15);
+    
+    svg {
+        top: 20px;
+        left: 16px;
+        border: 1px solid #E4E4E4;
+        position: absolute;
+    }
+}
+
+.grid-title {
+    min-height: 40px;
+    line-height: 20px;
+    margin-bottom: 10px;
+    padding-left: 42px;
+    font-size: 17px;
+    display: block;
+    @include SFProDisplayMedium;
+}
+
+.grid-text {
+    font-size: 14px;
+    line-height: 17px;
+    @include SFProTextLight
+}
+
+@include to('xs') {
+    .member-page {
+        width: 100%;
+    }
+    .grid-item {
+        width: 100%;
+    }
+}
+
+@include from('sm') {
+    .grid-item {
+        width: 50%;
+    }
+}
+
+@include from('lg') {
+    .grid-item {
+        width: calc(100% / 3);
+    }
+}
+
+@include from('xl') {
+    .grid-item {
+        width: 25%;
+    }
+}

@@ -4,7 +4,7 @@
 
 //= ../../bower_components/swiper/dist/js/swiper.jquery.min.js
 
-// = lib/truncateText
+//= lib/masonry.pkgd.min.js
 
 //= lib/jquery.dotdotdot.min.js
 
