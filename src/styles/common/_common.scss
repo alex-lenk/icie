@@ -2,7 +2,7 @@
 @import "mixin";
 
 html {
-    font-size: 15px;
+    font-size: 16px;
 }
 
 html,
@@ -18,7 +18,7 @@ body {
     background-color: #fff;
     display: flex;
     flex-direction: column;
-    @include font-size(15px);
+    @include font-size(16px);
     @include SFProTextRegular;
 }
 
@@ -58,7 +58,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    margin-bottom: 25px;
+    margin-bottom: 50px;
+    font-size: 26px;
+    color: #390050;
     padding: 0;
     @include font-size(26px);
 }
@@ -160,7 +162,65 @@ button, input, select, textarea {
     }
 }
 
-.bg-full {
-    position: relative;
+.overflow {
+    overflow: hidden;
 }
 
+.header-page {
+    height: 150px;
+    margin-bottom: 75px;
+    border-bottom: 4px solid #474CA6;
+    position: relative;
+    .header-panel {
+        height: 150px;
+        background: url(../img/bg/bg-header-page.jpg) no-repeat right top;
+        &::before {
+            width: 350px;
+            height: 100%;
+            top: -4px;
+            left: 0;
+            position: absolute;
+            background-color: #F9F9FC;
+            content: '';
+            z-index: 4;
+            transform: skew(-32deg);
+        }
+        &::after {
+            width: 160rem;
+            height: 100%;
+            margin-right: -280px;
+            top: 0;
+            right: 100%;
+            background-color: #474CA6;
+            position: absolute;
+            z-index: 5;
+            content: '';
+            transform: skew(-32deg);
+        }
+    }
+}
+
+.content {
+    @include SFProTextLight;
+}
+
+.sidebar-menu {
+    list-style: none;
+    background: #fff;
+    border-radius: 1px;
+    a {
+        &::before {
+            left: -12px;
+            margin-left: -9px;
+            top: -1px;
+            letter-spacing: -3px;
+            display: inline;
+            position: relative;
+            content: '››';
+            transition: all 0.3s ease;
+        }
+        &:hover::before {
+            left: -9px;
+        }
+    }
+}

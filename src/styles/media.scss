@@ -10,7 +10,10 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
 
 @media (max-width: 1920px) {
     body {
-        background-image: url(../img/bg-header.jpg), url(../img/bg-body.jpg);
+        background-image: url(../img/bg-body.jpg);
+    }
+    .home {
+        background-image: url(../img/bg-header.jpg)
     }
     footer {
         background: url(../img/bg/bg-footer.png) no-repeat center;
@@ -56,7 +59,7 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
 }
 
 @include to('md') {
-    .home-header {
+    .header-info {
         margin-bottom: 110px;
     }
     
@@ -109,11 +112,15 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
     .language-bar {
         margin-right: 31px;
         margin-left: 2px;
+        z-index: 24;
     }
     
-    .search-top .search {
-        width: 20px;
-        height: 20px;
+    .search-top {
+        z-index: 23;
+        .search {
+            width: 20px;
+            height: 20px;
+        }
     }
     .search-top-input {
         height: 55px;
@@ -245,6 +252,11 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
         padding-left: 20px;
         display: inline-block;
     }
+    
+    .content {
+        margin-bottom: 80px;
+        order: 3;
+    }
 }
 
 @include to('sm') {
@@ -252,7 +264,7 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
         overflow-x: hidden;
     }
     
-    .home-header {
+    .header-panel {
         position: static;
     }
     
@@ -270,9 +282,9 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
         top: 0;
         left: 0;
         background-color: #fff;
-        position: absolute;
+        position: fixed;
         overflow: hidden;
-        z-index: 10;
+        z-index: 30;
         box-shadow: 0 5px 18px 0 rgba(0, 0, 0, 0.05);
         transition: transform 300ms linear;
         transform: translateX(103%);
@@ -401,14 +413,16 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
 }
 
 @include to('xs') {
-    body {
+    .home {
         background: url(../img/bg/bg-xs@2x.jpg) center -50px no-repeat;
         background-size: contain;
     }
     
     .home-header {
-        margin-bottom: 218px;
         padding-top: 20px;
+    }
+    .header-info {
+        margin-bottom: 180px;
     }
     .header-panel {
         margin-bottom: 87px;
@@ -494,7 +508,7 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
         margin-bottom: 35px;
     }
     .first-face {
-        margin-bottom: 0;
+        margin-bottom: 25px;
         padding: 17px 10px 4px;
         .read-more {
             margin-left: 0;
@@ -543,6 +557,37 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
     .last-news-wrap {
         margin-bottom: 57px;
     }
+    
+    .header-page {
+        height: 110px;
+        margin-bottom: 60px;
+        .header-panel {
+            height: inherit;
+            margin-bottom: 0;
+            &::before {
+                width: 240px;
+            }
+            &::after {
+                margin-right: -160px;
+            }
+        }
+    }
+    
+    h1 {
+        margin-bottom: 45px;
+    }
+    
+    .sidebar {
+        margin-bottom: 25px;
+    }
+    
+    .sidebar-menu {
+        padding-left: 40px;
+        margin-bottom: 0;
+        li:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
 }
 
 @media (max-width: 374px) {
@@ -584,6 +629,27 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
     
     .first-face-content {
         padding-top: 26px;
+    }
+    
+    .sidebar {
+        margin-bottom: 15px;
+    }
+    .sidebar-menu {
+        padding: 35px 0 30px 48px;
+        column-gap: 0;
+        a {
+            padding-left: 20px;
+            position: relative;
+            display: inline-block;
+            &::before {
+                left: 0;
+                margin-left: 0;
+                position: absolute;
+            }
+            &:hover::before {
+                left: 3px;
+            }
+        }
     }
 }
 
@@ -687,6 +753,19 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
         padding-left: 38px;
         column-gap: 55px;
     }
+    
+    .header-page .header-panel {
+        &::before {
+            width: 460px;
+        }
+        &::after {
+            margin-right: -365px;
+        }
+    }
+    
+    .sidebar-menu {
+        column-count: 3;
+    }
 }
 
 @include at('sm') {
@@ -700,6 +779,19 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
             text-align: left;
             order: 3;
         }
+    }
+    
+    .header-page .header-panel {
+        &::before {
+            width: 360px;
+        }
+        &::after {
+            margin-right: -300px;
+        }
+    }
+    
+    .sidebar-menu {
+        column-count: 2;
     }
 }
 
@@ -777,13 +869,16 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
 }
 
 @include from('lg') {
-    .header-panel {
+    .home-header {
+        position: relative;
+        z-index: 20;
         margin-bottom: 100px;
     }
     
     .top-panel {
         background-color: #fff;
         padding: 0 27px 0 40px;
+        z-index: 6;
         box-shadow: 0 5px 18px 0 rgba(0, 0, 0, 0.05);
     }
     
@@ -803,6 +898,7 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
             height: inherit;
             line-height: 67px;
             position: relative;
+            z-index: 20;
             &:hover .dropdown-wrap {
                 opacity: 1;
                 pointer-events: auto;
@@ -855,11 +951,6 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
             position: relative;
             content: '››';
         }
-    }
-    
-    .header-panel {
-        position: relative;
-        z-index: 20;
     }
     
     .top-panel {
@@ -946,6 +1037,19 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
     .last-news-text {
         height: 74px;
     }
+    
+    .content {
+        margin-bottom: 120px;
+    }
+    .fixed {
+        position: fixed;
+        top: 0;
+    }
+    
+    .sidebar-menu {
+        padding: 30px 15px 40px 50px;
+        border-top: 4px solid #474CA6;
+    }
 }
 
 @include from('md') {
@@ -962,6 +1066,13 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
     .article-list {
         display: flex;
         justify-content: space-between;
+    }
+    
+    .sidebar-menu {
+        box-shadow: 0 5px 18px 0 rgba(0, 0, 0, 0.05);
+        li:not(:last-child) {
+            margin-bottom: 27px;
+        }
     }
 }
 
@@ -991,5 +1102,13 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
         width: 205px;
         max-width: 205px;
         margin-right: 20px;
+    }
+    
+    .header-page .header-panel::after {
+        margin-right: -220px;
+    }
+    
+    .sidebar {
+        padding-left: 6%;
     }
 }

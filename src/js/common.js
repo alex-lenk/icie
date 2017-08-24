@@ -48,6 +48,7 @@ $(document).ready(function () {
     $(".menu-toggle, .close-menu").click(
         function () {
             $('.menu-wrap').toggleClass("nav-opened");
+            $('body').toggleClass("overflow");
         }
     );
 
@@ -59,4 +60,29 @@ $(document).ready(function () {
 
     $(".ellipsis").dotdotdot();
     $(".last-news-text").dotdotdot();
+
+
+    var
+        $window = $(window), // Основное окно
+
+        $sidebar = $(".sidebar"), // Блок, который нужно фиксировать при прокрутке
+        $sidebarMenu = $(".sidebar-menu"), // Блок, который нужно фиксировать при прокрутке
+
+        $h = $sidebar.offset().top; // Определяем координаты верха нужного блока (например, с навигацией или виджетом, который надо фиксировать)
+
+    $window.on('scroll', function () {
+
+        // Как далеко вниз прокрутили страницу
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        // Если прокрутили скролл ниже макушки нужного блока, включаем ему фиксацию
+        if (scrollTop > $h) {
+
+            $sidebarMenu.addClass("fixed");
+            // Иначе возвращаем всё назад
+        } else {
+            $sidebarMenu.removeClass("fixed");
+        }
+    });
+
 });
