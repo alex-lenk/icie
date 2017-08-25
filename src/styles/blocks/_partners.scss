@@ -1,3 +1,16 @@
+.partners {
+    max-width: 100%;
+    overflow: hidden;
+    flex: 1 0 auto;
+}
+
+.partners-img {
+    max-height: 54px;
+    img {
+        max-height: 54px;
+    }
+}
+
 .swiper-container {
     width: 100%;
     height: 100%;
@@ -13,16 +26,4 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.partners {
-    max-width: 100%;
-    overflow: hidden;
-}
-
-.partners-img {
-    max-height: 54px;
-    img {
-        max-height: 54px;
-    }
 }

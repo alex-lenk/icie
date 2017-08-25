@@ -1,0 +1,40 @@
+.interview {
+    margin-bottom: 50px;
+    padding-left: 0;
+    list-style: none;
+}
+
+.interview-item {
+    display: flex;
+}
+
+.interview-media {
+    margin-right: 20px;
+    flex: 1 0 auto;
+}
+
+.interview-title {
+    margin-bottom: 20px;
+    font-size: 17px;
+    line-height: 20px;
+    color: #390050;
+    @include SFProDisplayMedium;
+}
+
+.interview-panel {
+    display: flex;
+    .read-more {
+        margin-left: auto;
+        @include SFProDisplayBold
+    }
+}
+
+.interview-date {
+    color: #9B8EA0;
+    font-size: 14px;
+}
+
+.interview-date {
+    color: #9B8EA0;
+    font-size: 14px;
+}

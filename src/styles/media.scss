@@ -257,6 +257,10 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
         margin-bottom: 80px;
         order: 3;
     }
+    
+    .interview-item {
+        margin-bottom: 40px;
+    }
 }
 
 @include to('sm') {
@@ -588,6 +592,10 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
             margin-bottom: 15px;
         }
     }
+    
+    .interview-media {
+        max-width: 110px;
+    }
 }
 
 @media (max-width: 374px) {
@@ -650,6 +658,14 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
                 left: 3px;
             }
         }
+    }
+    
+    .interview {
+        margin-bottom: 60px;
+    }
+    
+    .interview-media {
+        max-width: 150px;
     }
 }
 
@@ -1049,6 +1065,13 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
     .sidebar-menu {
         padding: 30px 15px 40px 50px;
         border-top: 4px solid #474CA6;
+    }
+    
+    .interview-item {
+        margin-bottom: 50px;
+    }
+    .interview-media {
+        max-width: 165px;
     }
 }
 
