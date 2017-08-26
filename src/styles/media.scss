@@ -50,6 +50,10 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
 }
 
 @include to('md') {
+    .back-listing a {
+        left: 0;
+    }
+    
     .menu-wrap {
         order: 3;
         &:not(.nav-opened) .menu-toggle {
@@ -428,6 +432,27 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
 }
 
 @include to('xs') {
+    h1 {
+        margin-bottom: 45px;
+        line-height: 32px;
+    }
+    
+    .back-listing {
+        flex-wrap: wrap;
+        a {
+            left: -6px;
+        }
+        h1 {
+            width: 100%;
+            margin-top: 18px;
+        }
+    }
+    .interview-inner .first-img {
+        margin: 0 auto 10px;
+        display: block;
+        float: none;
+    }
+    
     .top-panel {
         height: 50px;
     }
@@ -584,10 +609,6 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
         }
     }
     
-    h1 {
-        margin-bottom: 45px;
-    }
-    
     .sidebar {
         margin-bottom: 25px;
     }
@@ -627,6 +648,10 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
 }
 
 @include between('sm', 'md') {
+    .back-listing {
+        padding-left: 54px;
+    }
+    
     .header-panel {
         margin-bottom: 135px;
     }
@@ -918,17 +943,10 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
 }
 
 @include from('lg') {
-    .interview-inner h1 a:hover {
-        &::before, &::after {
-            border-color: #178ace;
-        }
-        &::before {
-            left: -54px;
-        }
-        &::after {
-            left: -67px;
-        }
+    .back-listing a {
+        left: -61px;
     }
+    
     .header-info::after {
         left: 50%;
         bottom: 0;
@@ -1130,24 +1148,6 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
         display: none;
     }
     
-    .interview-inner h1 a {
-        &::after, &::before {
-            top: 10px;
-        }
-        
-        &::before {
-            left: -48px;
-        }
-        &::after {
-            left: -61px;
-        }
-    }
-    
-    .interview-inner-data {
-        margin-top: 5px;
-        margin-right: 20px;
-    }
-    
     footer {
         position: relative;
         &::after {
@@ -1167,6 +1167,18 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
 }
 
 @include from('sm') {
+    .back-listing a {
+        top: 11px;
+    }
+    
+    .back-listing-data {
+        margin-top: 9px;
+    }
+    
+    .back-listing-data {
+        order: 2;
+    }
+    
     .search-top-input {
         width: 0;
     }

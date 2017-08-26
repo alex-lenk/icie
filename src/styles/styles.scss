@@ -24,3 +24,41 @@
     margin-bottom: 0;
     list-style: none;
 }
+
+.back-listing {
+    position: relative;
+    display: flex;
+    @include clearfix;
+    a {
+        width: 25px;
+        height: 20px;
+        position: absolute;
+        &::before, &::after {
+            width: 14px;
+            height: 14px;
+            margin-left: 10px;
+            border-left: 3px solid #6BC5D2;
+            border-bottom: 3px solid #6BC5D2;
+            transform: rotate(45deg);
+            position: absolute;
+            content: '';
+            transition: all 0.3s ease;
+        }
+        &::before {
+            left: 11px;
+        }
+        &::after {
+            left: 0;
+        }
+        &:hover {
+            &::before,
+            &::after {
+                border-color: #178ace;
+            }
+        }
+    }
+    
+    h1 {
+        margin-right: 20px;
+    }
+}
