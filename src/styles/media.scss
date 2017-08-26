@@ -436,6 +436,17 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
         margin-bottom: 45px;
         line-height: 32px;
     }
+    
+    .photoreports-list li {
+        margin-bottom: 40px;
+    }
+    .photoreports-meta {
+        flex-direction: column;
+    }
+    .photoreports-title {
+        margin-bottom: 10px;
+    }
+    
     .documents-list {
         margin-bottom: 65px;
         li {
@@ -1173,6 +1184,16 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
 }
 
 @include from('sm') {
+    .photoreports-list li {
+        margin-bottom: 45px;
+    }
+    .photoreports-title {
+        margin-right: 10px;
+    }
+    .photoreports-data {
+        margin-left: auto;
+    }
+    
     .back-listing a {
         top: 11px;
     }

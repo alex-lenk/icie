@@ -1,0 +1,20 @@
+.photoreports-list img {
+    box-shadow: 0 5px 18px 0 rgba(0, 0, 0, 0.10);
+    border-radius: 1px;
+}
+
+.photoreports-meta {
+    margin-top: 10px;
+    font-size: 14px;
+    display: flex;
+    @include SFProTextRegular;
+}
+
+.photoreports-title {
+    line-height: 18px;
+}
+
+.photoreports-data {
+    flex: none;
+    color: #9B8EA0;
+}
