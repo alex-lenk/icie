@@ -1,0 +1,24 @@
+.documents-list {
+    margin-bottom: 30px;
+    li {
+        margin-bottom: 30px;
+    }
+}
+
+.documents-item {
+    padding: 20px 70px 20px 30px;
+    background: #fff;
+    position: relative;
+    display: block;
+    font-size: 17px;
+    box-shadow: 0 5px 18px rgba(#000, .10);
+    @include SFProTextRegular;
+    svg {
+        width: 31px;
+        height: 32px;
+        position: absolute;
+        right: 30px;
+        top: 50%;
+        margin-top: -16px;
+    }
+}

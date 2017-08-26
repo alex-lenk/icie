@@ -436,6 +436,12 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
         margin-bottom: 45px;
         line-height: 32px;
     }
+    .documents-list {
+        margin-bottom: 65px;
+        li {
+            margin-bottom: 15px;
+        }
+    }
     
     .back-listing {
         flex-wrap: wrap;

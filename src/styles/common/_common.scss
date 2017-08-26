@@ -12,12 +12,12 @@ body {
 }
 
 body {
-    height: 100%;
     color: #2F2732;
     line-height: 1.4;
     background-repeat: no-repeat;
     background-color: #fff;
     display: flex;
+    min-height: 100vh;
     flex-direction: column;
     @include font-size(16px);
     @include SFProTextRegular;
@@ -54,21 +54,23 @@ h2, h3, h4, h5 {
 
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
+    padding: 0;
     font-weight: normal;
+    color: #390050;
     @include SFProDisplayBold;
 }
 
 h1 {
     margin-bottom: 50px;
     font-size: 26px;
-    color: #390050;
-    padding: 0;
     text-transform: uppercase;
     @include font-size(26px);
 }
 
 h2 {
-    @include font-size(23px);
+    margin-bottom: 26px;
+    font-size: 22px;
+    text-transform: uppercase;
 }
 
 h3 {
@@ -127,22 +129,23 @@ h6 {
 }
 
 .list {
-    &-blank {
+    &-double-arrow {
         padding-left: 0;
+        margin-bottom: 0;
+        font-size: 17px;
+        line-height: 24px;
         list-style: none;
-        li {
-            padding-left: 40px;
+        @include SFProTextRegular;
+        li:not(:last-child) {
+            margin-bottom: 25px;
+        }
+        a::before {
+            margin-right: 13px;
+            top: -1px;
+            letter-spacing: -3px;
+            display: inline;
             position: relative;
-            &::before {
-                width: 7px;
-                height: 7px;
-                border-radius: 50%;
-                border: 1px solid $mainColor;
-                position: absolute;
-                top: 8px;
-                left: 20px;
-                content: '';
-            }
+            content: '››';
         }
     }
     &-unstyled {
@@ -228,5 +231,7 @@ button, input, select, textarea {
 }
 
 .wrapper {
+    margin-bottom: 50px;
     overflow-x: hidden;
+    flex: 1;
 }
