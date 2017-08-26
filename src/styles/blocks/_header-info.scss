@@ -1,6 +1,18 @@
 .header-info {
+    position: relative;
+    z-index: 10;
     display: flex;
     flex: 1 0 auto;
+    &::after {
+        width: 720px;
+        height: 367px;
+        position: absolute;
+        content: '';
+        background: url(../img/bg/bg-land.png) center top no-repeat;
+        background-size: contain;
+        z-index: -1;
+        opacity: .25;
+    }
 }
 
 .header-content {

@@ -9,21 +9,12 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
 }*/
 
 @media (max-width: 1920px) {
-    body {
-        background-image: url(../img/bg-body.jpg);
-    }
-    .home {
-        background-image: url(../img/bg-header.jpg)
-    }
     footer {
         background: url(../img/bg/bg-footer.png) no-repeat center;
     }
 }
 
 @include to('lg') {
-    body {
-        background-position: 35% 0, 100% 113%;
-    }
     .dropdown-link {
         padding-right: 20px;
     }
@@ -59,10 +50,6 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
 }
 
 @include to('md') {
-    .header-info {
-        margin-bottom: 110px;
-    }
-    
     .menu-wrap {
         order: 3;
         &:not(.nav-opened) .menu-toggle {
@@ -74,8 +61,6 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
         }
     }
     .menu-toggle {
-        width: 55px;
-        height: 55px;
         padding: 0;
         display: block;
         position: relative;
@@ -261,6 +246,15 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
     .interview-item {
         margin-bottom: 40px;
     }
+    
+    .home-header {
+        background: url(../img/bg/bg-header-sm@2x.jpg) left bottom no-repeat;
+        background-size: cover;
+    }
+    .header-info::after {
+        right: 0;
+        top: 0;
+    }
 }
 
 @include to('sm') {
@@ -275,13 +269,9 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
     .menu-toggle {
         width: 50px;
         height: 50px;
-        &::before {
-            margin-left: -10px
-        }
     }
     .nav-wrap {
         width: 100%;
-        height: 500px;
         padding-bottom: 30px;
         top: 0;
         left: 0;
@@ -414,22 +404,39 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
     .land {
         display: none;
     }
+    
+    .header-info::after {
+        width: 100%;
+        right: 0;
+        top: -70px;
+    }
+    
+    .interview-inner h1 a {
+        margin-top: 10px;
+        display: inline-block;
+        &::after, &::before {
+            top: -38px;
+        }
+        
+        &::before {
+            left: 7px;
+        }
+        &::after {
+            left: -6px;
+        }
+    }
 }
 
 @include to('xs') {
-    .home {
-        background: url(../img/bg/bg-xs@2x.jpg) center -50px no-repeat;
-        background-size: contain;
+    .top-panel {
+        height: 50px;
     }
     
     .home-header {
-        padding-top: 20px;
-    }
-    .header-info {
-        margin-bottom: 180px;
+        height: 675px;
     }
     .header-panel {
-        margin-bottom: 87px;
+        margin-bottom: 92px;
     }
     .header-title-sup {
         margin-bottom: 28px;
@@ -596,6 +603,10 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
     .interview-media {
         max-width: 110px;
     }
+    
+    .home-header {
+        padding-top: 30px;
+    }
 }
 
 @media (max-width: 374px) {
@@ -605,6 +616,13 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
     }
     .footer-contacts li:first-child {
         margin-bottom: 24px;
+    }
+}
+
+@media (max-width: 375px) {
+    .home-header {
+        background: url(../img/bg/bg-header-xs@2x.jpg) center top no-repeat;
+        background-size: 100% 106%;
     }
 }
 
@@ -667,9 +685,22 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
     .interview-media {
         max-width: 150px;
     }
+    
+    .home-header {
+        height: 660px;
+        margin-bottom: 30px;
+    }
+    .header-info {
+        margin-bottom: 110px;
+    }
 }
 
 @include at('md') {
+    .menu-toggle {
+        width: 55px;
+        height: 55px;
+    }
+    
     .header-content {
         max-width: 56%;
         padding-top: 20px;
@@ -782,6 +813,11 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
     .sidebar-menu {
         column-count: 3;
     }
+    
+    footer::after {
+        max-width: 200px;
+        max-height: 225px;
+    }
 }
 
 @include at('sm') {
@@ -812,10 +848,11 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
 }
 
 @media (min-width: 1921px) {
-    body {
-        background-image: url(../img/bg/bg-header@2x.jpg), url(../img/bg/bg-body@2x.jpg);
-        background-size: 100% auto, contain;
+    .home-header {
+        background: url(../img/bg/bg-header.jpg) center bottom no-repeat;
+        background-size: cover;
     }
+    
     footer {
         background: url(../img/bg/bg-footer@2x.png) no-repeat center;
         background-size: cover;
@@ -823,10 +860,6 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
 }
 
 @include from('xl') {
-    body {
-        background-position: top center, right bottom;
-    }
-    
     .menu > li {
         &:not(:first-child):not(:last-child) {
             margin-left: 25px;
@@ -885,7 +918,12 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
 }
 
 @include from('lg') {
-    .home-header {
+    .header-info::after {
+        left: 50%;
+        bottom: 0;
+    }
+    
+    .home-header-wrap {
         position: relative;
         z-index: 20;
         margin-bottom: 100px;
@@ -1079,6 +1117,41 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
     .nav-head {
         display: none;
     }
+    
+    .interview-inner h1 a {
+        &::after, &::before {
+            top: 10px;
+        }
+        
+        &::before {
+            left: -48px;
+        }
+        &::after {
+            left: -61px;
+        }
+    }
+    
+    .interview-inner-data {
+        margin-top: 5px;
+        margin-right: 20px;
+    }
+    
+    footer {
+        position: relative;
+        &::after {
+            width: 100%;
+            height: 100%;
+            max-width: 275px;
+            max-height: 420px;
+            right: 0;
+            bottom: 298px;
+            position: absolute;
+            background: url(../img/bg/bg-content@2x.png) no-repeat right bottom;
+            background-size: contain;
+            content: '';
+            z-index: -1;
+        }
+    }
 }
 
 @include from('sm') {
@@ -1100,6 +1173,18 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
 }
 
 @include at('lg') {
+    .home-header {
+        height: 720px;
+        margin-bottom: 30px;
+        background: url(../img/bg/bg-header-lg@2x.jpg) left top no-repeat;
+        background-size: 100% 57%;
+    }
+    
+    .home-content {
+        background: url(../img/bg/bg-home-content@2x.png) left top no-repeat;
+        background-size: 592px 889px;
+    }
+    
     .menu > li {
         &:not(:first-child):not(:last-child) {
             margin-left: 20px;
@@ -1134,4 +1219,25 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
     .sidebar {
         padding-left: 6%;
     }
+    
+    footer::after {
+        max-width: 200px;
+        max-height: 225px;
+    }
 }
+
+@media (min-width: 1200px) and (max-width: 1920px) {
+    .home-header {
+        height: 720px;
+        margin-bottom: 30px;
+        position: relative;
+        background: url(../img/bg/bg-header.jpg) center top no-repeat;
+        background-size: auto 100%;
+    }
+    
+    .home-content {
+        background: url(../img/bg/bg-home-content@2x.png) left top no-repeat;
+        background-size: 592px 889px;
+    }
+}
+
