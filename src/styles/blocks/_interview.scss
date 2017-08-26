@@ -38,3 +38,39 @@
     color: #9B8EA0;
     font-size: 14px;
 }
+
+.interview-inner {
+    margin-bottom: 150px;
+    h1 {
+        @include clearfix;
+        a {
+            position: relative;
+            &::before, &::after {
+                width: 14px;
+                height: 14px;
+                margin-left: 10px;
+                border-left: 3px solid #6BC5D2;
+                border-bottom: 3px solid #6BC5D2;
+                transform: rotate(45deg);
+                position: absolute;
+                content: '';
+                transition: all 0.3s ease;
+            }
+        }
+    }
+    .pull-left {
+        margin-right: 34px;
+        margin-bottom: 15px;
+    }
+}
+
+.interview-inner-data {
+    font-size: 17px;
+    color: #9B8EA0;
+    @include SFProTextRegular;
+}
+
+.interview-answer {
+    font-size: 15px;
+    @include SFProTextLight;
+}

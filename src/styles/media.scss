@@ -415,7 +415,7 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
         margin-top: 10px;
         display: inline-block;
         &::after, &::before {
-            top: -38px;
+            top: -29px;
         }
         
         &::before {
@@ -573,7 +573,7 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
         height: 110px;
         margin-bottom: 60px;
         .header-panel {
-            height: inherit;
+            height: 100%;
             margin-bottom: 0;
             &::before {
                 width: 240px;
@@ -918,6 +918,17 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
 }
 
 @include from('lg') {
+    .interview-inner h1 a:hover {
+        &::before, &::after {
+            border-color: #178ace;
+        }
+        &::before {
+            left: -54px;
+        }
+        &::after {
+            left: -67px;
+        }
+    }
     .header-info::after {
         left: 50%;
         bottom: 0;
@@ -986,6 +997,7 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
     }
     
     .dropdown {
+        min-height: 140px;
         padding: 32px 65px 0 35px;
         line-height: 1.2;
         background-color: #fff;
