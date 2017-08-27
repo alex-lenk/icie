@@ -443,9 +443,6 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
     .photoreports-meta {
         flex-direction: column;
     }
-    .photoreports-title {
-        margin-bottom: 10px;
-    }
     
     .documents-list {
         margin-bottom: 65px;
@@ -1186,12 +1183,6 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
 @include from('sm') {
     .photoreports-list li {
         margin-bottom: 45px;
-    }
-    .photoreports-title {
-        margin-right: 10px;
-    }
-    .photoreports-data {
-        margin-left: auto;
     }
     
     .back-listing a {

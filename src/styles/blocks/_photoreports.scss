@@ -7,14 +7,15 @@
     margin-top: 10px;
     font-size: 14px;
     display: flex;
+    flex-direction: column;
     @include SFProTextRegular;
 }
 
 .photoreports-title {
+    margin-bottom: 10px;
     line-height: 18px;
 }
 
 .photoreports-data {
-    flex: none;
     color: #9B8EA0;
 }
