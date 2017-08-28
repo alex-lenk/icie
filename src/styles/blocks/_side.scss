@@ -1,0 +1,108 @@
+.sidebar-menu {
+    margin-bottom: 35px;
+}
+
+.sidebar-menu {
+    list-style: none;
+    background: #fff;
+    border-radius: 1px;
+    a {
+        &::before {
+            left: -12px;
+            margin-left: -9px;
+            top: -1px;
+            letter-spacing: -3px;
+            display: inline;
+            position: relative;
+            content: '››';
+            transition: all 0.3s ease;
+        }
+        &:hover::before {
+            left: -9px;
+        }
+    }
+}
+
+.side-block {
+    padding: 22px 27px;
+    border-top: 4px solid #474CA6;
+    background: #FFFFFF;
+    border-radius: 1px;
+    box-shadow: 0 5px 18px 0 rgba(#000, .05);
+}
+
+.side-title {
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.side-list-title {
+    padding-right: 10px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    line-height: 16px;
+    color: #390050;
+    display: inline-block;
+    @include SFProDisplayMedium
+}
+
+.side-news-list li {
+    padding-bottom: 18px;
+    border-bottom: 1px solid #E1F5F2;
+    &:not(:last-child) {
+        margin-bottom: 25px;
+    }
+}
+
+.side-meta {
+    display: flex;
+    justify-content: space-between;
+    @include SFProTextRegular;
+}
+
+.info-source {
+    font-size: 15px;
+    color: #2F2732;
+    letter-spacing: 0;
+}
+
+.side-data {
+    font-size: 14px;
+    color: #9B8EA0;
+}
+
+.side-all {
+    margin-top: 35px;
+    font-size: 15px;
+    text-transform: uppercase;
+    text-align: center;
+    @include SFProDisplayBold;
+    a {
+        padding-right: 19px;
+        position: relative;
+        display: inline-block;
+        transition: all 0.3s ease;
+        &::after, &::before {
+            width: 7px;
+            height: 7px;
+            top: 6px;
+            border-right: 2px solid #390050;
+            border-bottom: 2px solid #390050;
+            transform: rotate(-45deg);
+            position: absolute;
+            content: '';
+            transition: all 0.3s ease;
+        }
+        &::before {
+            right: 8px;
+        }
+        &::after {
+            right: 2px;
+        }
+        &:hover {
+            &::before, &::after {
+                border-color: #178ace;
+            }
+        }
+    }
+}

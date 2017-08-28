@@ -209,27 +209,6 @@ button, input, select, textarea {
     @include SFProTextLight;
 }
 
-.sidebar-menu {
-    list-style: none;
-    background: #fff;
-    border-radius: 1px;
-    a {
-        &::before {
-            left: -12px;
-            margin-left: -9px;
-            top: -1px;
-            letter-spacing: -3px;
-            display: inline;
-            position: relative;
-            content: '››';
-            transition: all 0.3s ease;
-        }
-        &:hover::before {
-            left: -9px;
-        }
-    }
-}
-
 .wrapper {
     margin-bottom: 50px;
     overflow-x: hidden;
