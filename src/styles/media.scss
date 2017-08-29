@@ -922,74 +922,68 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
     }
 }
 
-@include from('xl') {
-    .gallery-wrap::before {
-        width: 90%;
-        left: 5%;
-    }
-    .content-gutters {
-        padding-left: 5%;
-        padding-right: 5%;
+@include from('sm') {
+    .photoreports-list li {
+        margin-bottom: 45px;
     }
     
-    .menu > li {
-        &:not(:first-child):not(:last-child) {
-            margin-left: 25px;
-            margin-right: 25px;
+    .back-listing a {
+        top: 11px;
+    }
+    
+    .back-listing-data {
+        margin-top: 9px;
+    }
+    
+    .back-listing-data {
+        order: 2;
+    }
+    
+    .search-top-input {
+        width: 0;
+    }
+    
+    .article-list {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .sidebar-menu {
+        box-shadow: 0 5px 18px 0 rgba(0, 0, 0, 0.05);
+        li:not(:last-child) {
+            margin-bottom: 27px;
         }
-        &:first-child {
-            margin-right: 25px;
+    }
+}
+
+@include from('md') {
+    .nav-head {
+        display: none;
+    }
+    
+    footer {
+        position: relative;
+        &::after {
+            width: 100%;
+            height: 100%;
+            max-width: 275px;
+            max-height: 420px;
+            right: 0;
+            bottom: 298px;
+            position: absolute;
+            background: url(../img/bg/bg-content@2x.png) no-repeat right bottom;
+            background-size: contain;
+            content: '';
+            z-index: -1;
         }
-        &:last-child {
-            margin-left: 25px;
-        }
-    }
-    .dropdown-link {
-        padding-right: 25px;
-    }
-    
-    .search-top {
-        padding-left: 100px;
-    }
-    
-    .header-title {
-        margin-bottom: 7px;
-        font-size: 34px;
-        line-height: 38px;
-    }
-    .header-title-sup {
-        margin-bottom: 26px;
-        font-size: 22px;
-    }
-    .header-text {
-        margin-bottom: 55px;
-    }
-    
-    .last-news-media {
-        width: 147px;
-        margin-right: 28px;
-    }
-    
-    .our-project-list {
-        padding: 24px 29px 0;
-    }
-    
-    .our-project-media {
-        width: 230px;
-        max-width: 230px;
-        margin-right: 28px;
-    }
-    
-    .first-face-text {
-        max-width: 362px;
-    }
-    
-    .footer-menu {
-        padding-left: 8.333333%;
     }
 }
 
 @include from('lg') {
+    .side-block:not(.sidebar-menu) {
+        width: 294px;
+    }
+    
     .gallery-wrap {
         padding-right: 5%;
         padding-left: 5%;
@@ -1198,60 +1192,74 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
     }
 }
 
-@include from('md') {
-    .nav-head {
-        display: none;
+@include from('xl') {
+    .side-block:not(.sidebar-menu) {
+        width: 353px;
     }
     
-    footer {
-        position: relative;
-        &::after {
-            width: 100%;
-            height: 100%;
-            max-width: 275px;
-            max-height: 420px;
-            right: 0;
-            bottom: 298px;
-            position: absolute;
-            background: url(../img/bg/bg-content@2x.png) no-repeat right bottom;
-            background-size: contain;
-            content: '';
-            z-index: -1;
+    .gallery-wrap::before {
+        width: 90%;
+        left: 5%;
+    }
+    .content-gutters {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    
+    .menu > li {
+        &:not(:first-child):not(:last-child) {
+            margin-left: 25px;
+            margin-right: 25px;
+        }
+        &:first-child {
+            margin-right: 25px;
+        }
+        &:last-child {
+            margin-left: 25px;
         }
     }
-}
-
-@include from('sm') {
-    .photoreports-list li {
-        margin-bottom: 45px;
+    .dropdown-link {
+        padding-right: 25px;
     }
     
-    .back-listing a {
-        top: 11px;
+    .search-top {
+        padding-left: 100px;
     }
     
-    .back-listing-data {
-        margin-top: 9px;
+    .header-title {
+        margin-bottom: 7px;
+        font-size: 34px;
+        line-height: 38px;
+    }
+    .header-title-sup {
+        margin-bottom: 26px;
+        font-size: 22px;
+    }
+    .header-text {
+        margin-bottom: 55px;
     }
     
-    .back-listing-data {
-        order: 2;
+    .last-news-media {
+        width: 147px;
+        margin-right: 28px;
     }
     
-    .search-top-input {
-        width: 0;
+    .our-project-list {
+        padding: 24px 29px 0;
     }
     
-    .article-list {
-        display: flex;
-        justify-content: space-between;
+    .our-project-media {
+        width: 230px;
+        max-width: 230px;
+        margin-right: 28px;
     }
     
-    .sidebar-menu {
-        box-shadow: 0 5px 18px 0 rgba(0, 0, 0, 0.05);
-        li:not(:last-child) {
-            margin-bottom: 27px;
-        }
+    .first-face-text {
+        max-width: 362px;
+    }
+    
+    .footer-menu {
+        padding-left: 8.333333%;
     }
 }
 
