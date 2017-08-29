@@ -44,6 +44,33 @@ $(document).ready(function () {
         }
     });
 
+    var swiper = new Swiper('.gallery', {
+        paginationClickable: true,
+        slidesPerView: 4,
+        spaceBetween: 30,
+        grabCursor: true,
+        nextButton: '.gallery-next',
+        prevButton: '.gallery-prev',
+        breakpoints: {
+            1199: {
+                slidesPerView: 5,
+                spaceBetween: 20
+            },
+            992: {
+                slidesPerView: 3,
+                spaceBetween: 20
+            },
+            570: {
+                spaceBetween: 20,
+                slidesPerView: 'auto',
+                centeredSlides: true,
+                grabCursor: true,
+                autoplay: 4000,
+                autoplayDisableOnInteraction: false
+            }
+        }
+    });
+
 
     $(".menu-toggle, .close-menu").click(
         function () {

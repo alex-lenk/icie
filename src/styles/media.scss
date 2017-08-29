@@ -429,6 +429,22 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
             left: -6px;
         }
     }
+    
+    .gallery-wrap {
+        margin: 0 -20px;
+        .swiper-wrapper {
+            justify-content: center;
+        }
+    }
+    .gallery-prev, .gallery-next {
+        display: none;
+    }
+    .swiper-slide {
+        width: 195px;
+    }
+    .gallery-item {
+        max-width: 195px;
+    }
 }
 
 @include to('xs') {
@@ -735,6 +751,14 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
 }
 
 @include at('md') {
+    .gallery-wrap {
+        padding-right: 7%;
+        padding-left: 7%;
+    }
+    .gallery-item {
+        max-width: 195px;
+    }
+    
     .menu-toggle {
         width: 55px;
         height: 55px;
@@ -899,6 +923,15 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
 }
 
 @include from('xl') {
+    .gallery-wrap::before {
+        width: 90%;
+        left: 5%;
+    }
+    .content-gutters {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    
     .menu > li {
         &:not(:first-child):not(:last-child) {
             margin-left: 25px;
@@ -957,6 +990,14 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
 }
 
 @include from('lg') {
+    .gallery-wrap {
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+    .gallery-item {
+        max-width: 232px;
+    }
+    
     .back-listing a {
         left: -7px;
     }
