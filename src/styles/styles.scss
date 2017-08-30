@@ -30,7 +30,6 @@
 }
 
 .back-listing {
-    padding-left: 5%;
     position: relative;
     display: flex;
     @include clearfix;
@@ -162,4 +161,12 @@
 .title-source {
     font-size: 15px;
     margin-bottom: 10px;
+}
+
+.inner-title-source {
+    top: -45px;
+    font-size: 18px;
+    color: #474CA6;
+    position: relative;
+    @include SFProDisplayMedium;
 }
