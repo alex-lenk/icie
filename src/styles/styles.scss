@@ -23,6 +23,7 @@
 @import "blocks/photoreports";
 @import "blocks/side";
 @import "blocks/gallery";
+@import "blocks/journal";
 
 .partners-page {
     margin-bottom: 0;
@@ -169,4 +170,8 @@
     color: #474CA6;
     position: relative;
     @include SFProDisplayMedium;
+}
+
+.read-more::after {
+    color: #474CA6;
 }

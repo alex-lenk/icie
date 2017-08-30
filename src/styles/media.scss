@@ -50,6 +50,10 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
 }
 
 @include to('md') {
+    .journal-list {
+        flex-direction: column;
+    }
+    
     .back-listing a {
         left: 0;
     }
@@ -453,6 +457,19 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
         line-height: 32px;
     }
     
+    .journal-item {
+        padding-bottom: 7px;
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+    .journal-media {
+        display: none;
+    }
+    .journal-text {
+        margin-bottom: 20px;
+    }
+    
     .back-listing a {
         top: 3px;
     }
@@ -682,6 +699,13 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
 }
 
 @include between('sm', 'md') {
+    .journal-item {
+        padding-bottom: 40px;
+        &:not(:last-child) {
+            margin-bottom: 35px;
+        }
+    }
+    
     .back-listing, .inner-title-source {
         padding-left: 54px;
     }
@@ -984,6 +1008,17 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
 }
 
 @include from('lg') {
+    .journal-list {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .journal-item {
+        max-width: 47%;
+        flex-basis: 47%;
+        margin-bottom: 60px;
+        padding-bottom: 15px;
+    }
+    
     .back-listing {
         padding-left: 5%;
     }
