@@ -9,8 +9,3 @@
 //= lib/jquery.dotdotdot.min.js
 
 //= lib/jquery.fancybox.min.js
-
-// = lib/bootstrap.min.js
-
-// = lib/jquery.maskedinput.min.js
-

@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ru">
+//= template/head.html
+<body class="page">
+<div class="wrapper">
+    //= template/header-page.html
+
+    <div class="container">
+        <h1>Свяжитесь с нами</h1>
+        <div class="contacts-wrap row">
+            <div class="contacts-form-wrap col-lg-7">
+                <div class="contacts-toggle">
+                    <svg class="email">
+                        <use xlink:href="img/sprite.svg#email"></use>
+                    </svg>
+
+                    <span class="contacts-toggle-text">Отправить сообщение</span>
+                </div>
+
+                <form action="#" class="contacts-form">
+                    <div class="ui-half">
+                        <div class="ui-group ui-required">
+                            <input type="text" class="ui-field" id="name">
+                            <label for="name" class="ui-placeholder">Имя</label>
+                        </div>
+
+                        <div class="ui-group ui-required">
+                            <input type="text" class="ui-field" id="surname">
+                            <label for="surname" class="ui-placeholder">Фамилия</label>
+                        </div>
+
+                        <div class="ui-group ui-required">
+                            <input type="email" class="ui-field" id="email">
+                            <label for="email" class="ui-placeholder">Email</label>
+                        </div>
+
+                        <div class="ui-group ui-required">
+                            <input type="tel" class="ui-field" id="phone">
+                            <label for="phone" class="ui-placeholder">Телефон</label>
+                        </div>
+                    </div>
+
+                    <div class="ui-group">
+                        <textarea id="message" class="ui-field"></textarea>
+                        <label for="message" class="ui-placeholder">Ваше Сообщение</label>
+                    </div>
+
+                    <div class="contacts-form-bottom">
+                        <button class="btn btn-arrow">Отправить</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="contacts-info-wrap col-lg-5">
+                <div class="contacts-info">
+                    <ul class="contacts-info-list list-unstyled">
+                        <li>
+                            <svg class="phone">
+                                <use xlink:href="img/sprite.svg#phone"></use>
+                            </svg>
+
+                            <a href="tel:+7 (495) 663-02-09" rel="nofollow">+7 (495) 663-02-09</a>
+                        </li>
+                        <li>
+                            <svg class="print">
+                                <use xlink:href="img/sprite.svg#print"></use>
+                            </svg>
+
+                            +7 (495) 663-02-20
+                        </li>
+                        <li>
+                            <svg class="email">
+                                <use xlink:href="img/sprite.svg#email"></use>
+                            </svg>
+
+                            <a href="mailto:office@ic-ie.com" rel="nofollow">office@ic-ie.com</a>
+                        </li>
+                        <li>
+                            <svg class="pin">
+                                <use xlink:href="img/sprite.svg#pin"></use>
+                            </svg>
+
+                            109240, Россия, Москва,
+                            <br>
+                            Котельническая наб., 17
+                        </li>
+                    </ul>
+
+                    <svg class="worldwide">
+                        <use xlink:href="img/sprite.svg#worldwide"></use>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="map-canvas" data-long="-73.97438284009695" data-lat="40.6450922815045"></div>
+
+        <script type="text/javascript"
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8Nq1S-PgvBlbSeA7H4dnww_sfBRrVk70&callback=init" async defer></script>
+
+        <script async src="js/mapgoogle.js"></script>
+    </div>
+</div>
+
+//= template/footer.html
+
+//= template/scripts.html
+
+</body>
+</html>

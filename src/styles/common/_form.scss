@@ -17,41 +17,73 @@
 }
 
 .ui-group {
-    margin-bottom: 15px;
+    position: relative;
 }
 
 .ui-field {
     width: 100%;
-    height: 40px;
-    padding: 0 20px;
-    border: 1px solid #e5e5e5;
-    display: block;
-    border-radius: 4px;
+    height: 50px;
+    padding: 12px 0 0;
+    border: 0 solid #E1F5F2;
+    border-bottom-width: 1px;
     background-color: #fff;
-    color: #2F2732;
-    font-weight: 400;
+    font-size: 15px;
+    color: #390050;
+    display: block;
     transition: all .3s ease;
-    @include font-size(16px);
-    &:focus, &:active {
-        border-color: #6ba0b2;
-    }
+    @include SFProTextRegular;
 }
 
 textarea.ui-field {
-    height: 130px;
-    padding-top: 15px;
+    padding-top: 20px;
     resize: none;
-    overflow: hidden;
 }
 
-.vericode {
-    display: flex;
-    align-items: center;
-    img {
-        margin-right: 30px;
+.ui-placeholder {
+    width: 100%;
+    height: 50px;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+    font-size: 14px;
+    color: #9B8EA0;
+    position: absolute;
+    transition: padding-top .3s ease;
+    pointer-events: none;
+    @include SFProTextRegular;
+    &::after {
+        width: 0;
+        height: 1px;
+        top: 100%;
+        left: 0;
+        position: absolute;
+        background-color: #6BC5D2;
+        content: '';
+        transition: width .3s ease;
     }
 }
 
-.requiredValue {
-    border: 1px solid #ff0000;
+.ui-required .ui-placeholder::before {
+    margin-right: 4px;
+    content: '*';
+    color: #DF6F63;
+    display: inline;
+    font-size: 17px;
+    transition: all .3s ease;
+}
+
+.field-filled,
+.ui-field:focus + {
+    .ui-placeholder {
+        padding-top: 0;
+        font-size: 13px;
+        &::before {
+            margin-right: 0;
+            font-size: 13px;
+            color: #9B8EA0;
+        }
+        &::after {
+            width: 100%;
+        }
+    }
 }

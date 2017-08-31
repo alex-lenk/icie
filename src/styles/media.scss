@@ -270,6 +270,93 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
         overflow-x: hidden;
     }
     
+    .ui-group {
+        margin-bottom: 10px;
+    }
+    
+    .contacts-wrap {
+        display: flex;
+        flex-direction: column;
+    }
+    .contacts-form-wrap {
+        margin-top: 40px;
+        z-index: 5;
+        position: relative;
+        order: 2;
+    }
+    .contacts-form {
+        padding-right: 23px;
+        padding-left: 23px;
+        transition: all 0.3s ease;
+    }
+    
+    .contacts-toggle {
+        height: 60px;
+        padding-left: 55px;
+        background: #fff;
+        position: relative;
+        box-shadow: 0 5px 18px 0 rgba(#000, .05);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        &::after {
+            width: 8px;
+            height: 8px;
+            transform: rotate(-45deg);
+            position: absolute;
+            right: 24px;
+            top: 23px;
+            border-left: 2px solid #867A8A;
+            border-bottom: 2px solid #867A8A;
+            content: '';
+            pointer-events: none;
+            transition: all 0.3s ease;
+        }
+        .email {
+            width: 14px;
+            height: 15px;
+            top: 22px;
+            left: 25px;
+            fill: #867A8A;
+            position: absolute;
+            content: '';
+            pointer-events: none;
+            transition: all 0.3s ease;
+        }
+    }
+    
+    .contacts-toggle-text {
+        font-size: 15px;
+        color: #867A8A;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+        @include SFProDisplayMedium;
+    }
+    
+    .contacts-form-wrap:not(.contacts-toggle-opened) .contacts-form {
+        height: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        overflow: hidden;
+        opacity: 0;
+    }
+    
+    .contacts-toggle-opened {
+        .contacts-toggle {
+            &::after {
+                border-color: #474CA6;
+                transform: rotate(135deg);
+                top: 27px;
+            }
+            .email {
+                fill: #474CA6;
+            }
+        }
+        .contacts-toggle-text {
+            color: #474CA6;
+        }
+    }
+    
     .header-panel {
         position: static;
     }
@@ -779,6 +866,39 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
 }
 
 @include at('md') {
+    .contacts-form-wrap {
+        padding-right: 0;
+        flex-basis: 60%;
+    }
+    
+    .contacts-info-wrap {
+        flex-basis: 39%;
+        margin-left: auto;
+    }
+    
+    .contacts-form {
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+    
+    .contacts-info {
+        padding-left: 22px;
+        padding-right: 22px;
+        .worldwide {
+            width: 190px;
+            height: 190px;
+            fill: #fff;
+            opacity: .05;
+            position: absolute;
+            right: -110px;
+            bottom: -64px;
+        }
+    }
+    .ui-half .ui-group {
+        max-width: calc(100% / 2 - 13px);
+        flex-basis: calc(100% / 2 - 13px);
+    }
+    
     .gallery-wrap {
         padding-right: 7%;
         padding-left: 7%;
@@ -985,6 +1105,27 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
 }
 
 @include from('md') {
+    .contacts-form {
+        min-height: 325px;
+    }
+    .contacts-toggle {
+        display: none;
+    }
+    
+    .ui-group {
+        margin-bottom: 20px;
+    }
+    
+    .ui-half {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .ui-group {
+            max-width: calc(100% / 2 - 25px);
+            flex-basis: calc(100% / 2 - 25px);
+        }
+    }
+    
     .nav-head {
         display: none;
     }
@@ -1310,6 +1451,11 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
 }
 
 @include at('lg') {
+    .contacts-info {
+        padding-left: 45px;
+        padding-right: 45px;
+    }
+    
     .home-header {
         height: 720px;
         margin-bottom: 30px;

@@ -119,4 +119,17 @@ $(document).ready(function () {
         itemSelector: '.grid-item'
     });
 
+    $(".ui-field").change(function () {
+        if ($(this).val().trim().length) {
+            $(this).parent().addClass("field-filled");
+        } else {
+            $(this).parent().removeClass("field-filled");
+        }
+    });
+
+    $(".contacts-toggle").click(
+        function () {
+            $('.contacts-form-wrap').toggleClass("contacts-toggle-opened");
+        }
+    );
 });

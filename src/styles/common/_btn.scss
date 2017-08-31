@@ -24,4 +24,30 @@
             background: #474CA6;
         }
     }
+    &-arrow {
+        padding-right: 19px;
+        font-size: 15px;
+        color: #390050;
+        text-transform: uppercase;
+        position: relative;
+        @include SFProDisplayBold;
+        &::before, &::after {
+            width: 7px;
+            height: 7px;
+            top: 6px;
+            border-right: 2px solid #390050;
+            border-bottom: 2px solid #390050;
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            position: absolute;
+            transition: all .3s ease;
+            content: '';
+        }
+        &::before {
+            right: 4px;
+        }
+        &::after {
+            right: -2px;
+        }
+    }
 }
