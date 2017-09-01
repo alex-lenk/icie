@@ -1,0 +1,86 @@
+.partners-page {
+    padding-left: 0;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    list-style: none;
+}
+
+.partners-signature {
+    font-size: 17px;
+    color: #390050;
+    @include SFProDisplayMedium;
+}
+
+.partners-page-item {
+    height: 200px;
+    padding: 20px;
+    margin-bottom: 30px;
+    background: #fff;
+    text-align: center;
+    box-shadow: 0 5px 18px 0 rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    img {
+        opacity: .6;
+        filter: grayscale(100%);
+        transition: all 0.3s ease;
+    }
+    &:hover img {
+        filter: none;
+    }
+}
+
+.partners-page-media {
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: none;
+}
+
+.partners-page-text {
+    margin-top: 10px;
+    font-size: 15px;
+    color: #A599A9;
+    line-height: 20px;
+    display: block;
+    text-transform: uppercase;
+    @include SFProDisplayMedium;
+}
+
+.partners-logo img {
+    max-width: 106px;
+    opacity: .5;
+}
+
+.partners-logo-2 {
+    img {
+        max-width: 95px;
+    }
+    .partners-page-text {
+        font-size: 12px;
+        line-height: 16px;
+    }
+}
+
+.partners-logo-3 img {
+    max-width: 95px;
+}
+
+.partners-logo-4 img {
+    max-width: 120px;
+    opacity: .5;
+}
+
+.partners-logo-5 img {
+    max-width: 143px;
+}
+
+.partners-logo-6 img {
+    max-width: 120px;
+}
+
+.partners-logo-7 img {
+    max-width: 90px;
+}

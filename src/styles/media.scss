@@ -3,10 +3,13 @@
 @import "common/variables";
 @import "common/mixin";
 
-/*@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
 only screen and (min-resolution: 144dpi),
 only screen and (min--moz-device-pixel-ratio: 1.5) {
-}*/
+    .grid-title::before {
+        background-image: url(../img/sprite-flags@2x.png);
+    }
+}
 
 @media (max-width: 1920px) {
     footer {
@@ -544,6 +547,59 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
         line-height: 32px;
     }
     
+    .grid-more {
+        width: 100%;
+        top: auto;
+        bottom: 0;
+        left: 0;
+    }
+    
+    .member-page {
+        width: 100%;
+    }
+    .grid-item {
+        width: 100%;
+    }
+    
+    .partners-page-text {
+        font-size: 10px;
+        line-height: 15px;
+    }
+    
+    .partners-logo img {
+        max-width: 53px;
+    }
+    
+    .partners-logo-2 {
+        img {
+            max-width: 48px;
+        }
+        .partners-page-text {
+            font-size: 8px;
+            line-height: 14px;
+        }
+    }
+    
+    .partners-logo-3 img {
+        max-width: 61px;
+    }
+    
+    .partners-logo-4 img {
+        max-width: 61px;
+    }
+    
+    .partners-logo-5 img {
+        max-width: 61px;
+    }
+    
+    .partners-logo-6 img {
+        max-width: 61px;
+    }
+    
+    .partners-logo-7 img {
+        max-width: 61px;
+    }
+    
     .journal-item {
         padding-bottom: 7px;
         &:not(:last-child) {
@@ -786,6 +842,10 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
 }
 
 @include between('sm', 'md') {
+    .partners-page-item br {
+        display: none;
+    }
+    
     .journal-item {
         padding-bottom: 40px;
         &:not(:last-child) {
@@ -1071,6 +1131,14 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
 }
 
 @include from('sm') {
+    .grid-item {
+        width: 50%;
+    }
+    .grid-item-wrap:hover .grid-more {
+        width: 290px;
+        left: -18px;
+    }
+    
     .photoreports-list li {
         margin-bottom: 45px;
     }
@@ -1105,6 +1173,10 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
 }
 
 @include from('md') {
+    .partners-page-text {
+        letter-spacing: -0.2px;
+    }
+    
     .contacts-form {
         min-height: 325px;
     }
@@ -1149,6 +1221,10 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
 }
 
 @include from('lg') {
+    .grid-item {
+        width: calc(100% / 3);
+    }
+    
     .journal-list {
         flex-wrap: wrap;
         justify-content: space-between;
@@ -1380,6 +1456,10 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
 }
 
 @include from('xl') {
+    .grid-item {
+        width: 25%;
+    }
+    
     .side-block:not(.sidebar-menu) {
         width: 353px;
     }
