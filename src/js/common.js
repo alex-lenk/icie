@@ -1,4 +1,5 @@
 $(document).ready(function () {
+// Исправление бага в IE на телефонах
 // Copyright 2014-2017 The Bootstrap Authors
 // Copyright 2014-2017 Twitter, Inc.
 // Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
@@ -12,18 +13,37 @@ $(document).ready(function () {
         document.head.appendChild(msViewportStyle)
     }
 
-    $(".search-top-icon").click(
-        function () {
-            $('.search-top').toggleClass("search-top-opened");
-        }
-    );
+    // BEGIN: Открытие и закрытие поисковой панели в шапке сайта
+    var searchTop = $('.search-top'),
+        searchTopOpened = 'search-top-opened';
 
+    $('.search-top-icon').on('click', function () {
+        if (searchTop.hasClass(searchTopOpened)) {
+            searchTop.removeClass(searchTopOpened);
+        } else {
+            searchTop.addClass(searchTopOpened);
+        }
+    });
+
+    $(document).click(function (event) {
+        if ($(event.target).closest('.search-top').length)
+            return;
+        searchTop.removeClass(searchTopOpened);
+        event.stopPropagation();
+    });
+    // END
+
+
+    // BEGIN: Открытие и закрытие языковой панели в шапке сайта
     $(".language-bar-current").click(
         function () {
             $('.language-bar').toggleClass("language-bar-opened");
         }
     );
+    // END
 
+
+    // BEGIN: Инициализация слайдера на главной странице в блоке партнеров
     var swiper = new Swiper('.partners-carousel', {
         paginationClickable: true,
         slidesPerView: 6,
@@ -43,7 +63,10 @@ $(document).ready(function () {
             }
         }
     });
+    // END
 
+
+    // BEGIN: Инициализация слайдера на внутренних страницах
     var swiper = new Swiper('.gallery', {
         paginationClickable: true,
         slidesPerView: 4,
@@ -70,8 +93,10 @@ $(document).ready(function () {
             }
         }
     });
+    // END
 
 
+    // BEGIN: Открытие и закрытие основного меню сайта
     $(".menu-toggle, .close-menu").click(
         function () {
             $('.menu-wrap').toggleClass("nav-opened");
@@ -84,9 +109,13 @@ $(document).ready(function () {
             $(this).toggleClass("dropdown-item-opened");
         }
     );
+    // END
 
+
+    // BEGIN: Инициализация плагина для обрезки лишнего текст в блоках на главной
     $(".ellipsis").dotdotdot();
     $(".last-news-text").dotdotdot();
+    // END
 
 
     /* BEGIN: Плавающий блок в сайдбаре */
@@ -114,11 +143,15 @@ $(document).ready(function () {
     }
     /* END */
 
+
+    // BEGIN: Инициализация плагина для разбиении блоков
     $('.grid').masonry({
         // options
         itemSelector: '.grid-item'
     });
 
+
+    // BEGIN: Для форм
     $(".ui-field").change(function () {
         if ($(this).val().trim().length) {
             $(this).parent().addClass("field-filled");
@@ -127,6 +160,8 @@ $(document).ready(function () {
         }
     });
 
+
+    // BEGIN: Для открытия и закрытия форм на страницы контактов при маленьком разрешении экрана
     $(".contacts-toggle").click(
         function () {
             $('.contacts-form-wrap').toggleClass("contacts-toggle-opened");

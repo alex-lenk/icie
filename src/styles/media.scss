@@ -3,18 +3,8 @@
 @import "common/variables";
 @import "common/mixin";
 
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-only screen and (min-resolution: 144dpi),
-only screen and (min--moz-device-pixel-ratio: 1.5) {
-    .grid-title::before {
-        background-image: url(../img/sprite-flags@2x.png);
-    }
-}
-
 @media (max-width: 1920px) {
-    footer {
-        background: url(../img/bg/bg-footer.png) no-repeat center;
-    }
+    background: url(../img/bg/bg-footer.jpg) no-repeat center;
 }
 
 @include to('lg') {
@@ -259,7 +249,8 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
     }
     
     .home-header {
-        background: url(../img/bg/bg-header-sm@2x.jpg) left bottom no-repeat;
+        background-image: url(../img/bg/bg-header-sm@2x.jpg);
+        background-position: left bottom;
         background-size: cover;
     }
     .header-info::after {
@@ -494,7 +485,7 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
         top: -1px;
         display: inline;
         position: relative;
-        margin-right: 13px;
+        margin-right: 15px;
         letter-spacing: -3px;
         content: '››';
     }
@@ -545,6 +536,14 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
     h1 {
         margin-bottom: 45px;
         line-height: 32px;
+    }
+    
+    .header-title {
+        font-size: 8vw;
+    }
+    
+    .search-top-icon {
+        margin-top: 15px;
     }
     
     .grid-more {
@@ -653,6 +652,7 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
     
     .home-header {
         height: 675px;
+        padding-top: 30px;
     }
     .header-panel {
         margin-bottom: 92px;
@@ -668,21 +668,32 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
         }
     }
     
-    .logo {
-        width: 125px;
+    header .logo {
+        width: 33.5vw;
     }
     .language-bar {
+        width: 23vw;
         margin-right: 5px;
     }
     .language-bar-current {
-        padding-right: 13px;
         width: 55px;
+        height: 50px;
+        line-height: 50px;
+        padding-right: 13px;
         margin-left: auto;
         margin-right: auto;
         &::after {
             right: 0;
+            top: 19px;
         }
     }
+    .language-bar-opened .language-bar-current::after {
+        top: 24px;
+    }
+    .menu-toggle::before {
+        height: 2px;
+    }
+    
     .search-top {
         padding-right: 10px;
     }
@@ -746,7 +757,7 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
         }
     }
     .first-face-media {
-        width: 100px;
+        width: 26vw;
         margin-right: 13px;
     }
     
@@ -819,8 +830,12 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
         max-width: 110px;
     }
     
-    .home-header {
-        padding-top: 30px;
+    .read-more {
+        font-size: 3.5vw;
+    }
+    
+    .last-news-title {
+        font-size: 4.5vw;
     }
 }
 
@@ -836,7 +851,8 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
 
 @media (max-width: 375px) {
     .home-header {
-        background: url(../img/bg/bg-header-xs@2x.jpg) center top no-repeat;
+        background-image: url(../img/bg/bg-header-xs@2x.jpg);
+        background-position: center top;
         background-size: 100% 106%;
     }
 }
@@ -1120,12 +1136,13 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
 
 @media (min-width: 1921px) {
     .home-header {
-        background: url(../img/bg/bg-header.jpg) center bottom no-repeat;
+        background-image: url(../img/bg/bg-header@2x.jpg);
+        background-position: center bottom;
         background-size: cover;
     }
     
     footer {
-        background: url(../img/bg/bg-footer@2x.png) no-repeat center;
+        background: url(../img/bg/bg-footer@2x.jpg) no-repeat center;
         background-size: cover;
     }
 }
@@ -1539,7 +1556,8 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
     .home-header {
         height: 720px;
         margin-bottom: 30px;
-        background: url(../img/bg/bg-header-lg@2x.jpg) left top no-repeat;
+        background-image: url(../img/bg/bg-header-lg@2x.jpg);
+        background-position: left top;
         background-size: 100% 57%;
     }
     
@@ -1594,7 +1612,8 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
         height: 720px;
         margin-bottom: 30px;
         position: relative;
-        background: url(../img/bg/bg-header.jpg) center top no-repeat;
+        background-image: url(../img/bg/bg-header.jpg);
+        background-position: center top;
         background-size: auto 100%;
     }
     
@@ -1604,3 +1623,21 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
     }
 }
 
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min-resolution: 144dpi),
+only screen and (min--moz-device-pixel-ratio: 1.5) {
+    .home-header {
+        background-image: url(../img/bg/bg-header@2x.jpg);
+        background-position: center top;
+        background-size: cover;
+    }
+    
+    .grid-title::before {
+        background-image: url(../img/sprite-flags@2x.png);
+    }
+    
+    footer {
+        background: url(../img/bg/bg-footer@2x.jpg) no-repeat center;
+        background-size: cover;
+    }
+}

@@ -172,3 +172,13 @@
 .read-more::after {
     color: #474CA6;
 }
+
+.presentation-item {
+    .type-photo-element {
+        background: #474CA6;
+    }
+    .photoreports-title {
+        font-size: 17px;
+        @include SFProDisplayMedium;
+    }
+}
