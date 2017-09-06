@@ -4,7 +4,9 @@
 @import "common/mixin";
 
 @media (max-width: 1920px) {
-    background: url(../img/bg/bg-footer.jpg) no-repeat center;
+    footer {
+        background: url(../img/bg/bg-footer.jpg) no-repeat center;
+    }
 }
 
 @include to('lg') {

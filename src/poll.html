@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ru">
+//= template/head.html
+<body class="page">
+<div class="wrapper">
+    //= template/header-page.html
+
+    <div class="container">
+        <h1>Пишем заголовок опроса</h1>
+
+        <form action="#" class="poll">
+            <div class="poll-item">
+                <div class="poll-item-text">
+                    Стиль управления Вашего прямого начальника оказывает влияние на Вашу работу?
+                </div>
+
+                <div class="poll-choice">
+                    <label class="label-block">
+                        <input type="radio" name="radio" class="radio-custom">
+                        <span class="radio-custom-view label">Да</span>
+                    </label>
+
+                    <label class="label-block">
+                        <input type="radio" name="radio" class="radio-custom" checked>
+                        <span class="radio-custom-view label">Нет</span>
+                    </label>
+
+                    <label class="label-block">
+                        <input type="radio" name="radio" class="radio-custom">
+                        <span class="radio-custom-view label">Не знаю</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="poll-item">
+                <div class="poll-item-text">
+                    Вы довольны стилем управления начальников организации, где Вы работаете?
+                </div>
+
+                <div class="poll-choice">
+                    <label class="label-block">
+                        <input type="radio" name="radio" class="radio-custom">
+                        <span class="radio-custom-view label">Да</span>
+                    </label>
+
+                    <label class="label-block">
+                        <input type="radio" name="radio" class="radio-custom">
+                        <span class="radio-custom-view label">Нет</span>
+                    </label>
+
+                    <label class="label-block">
+                        <input type="radio" name="radio" class="radio-custom">
+                        <span class="radio-custom-view label">Не знаю</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="poll-item">
+                <div class="poll-item-text">
+                    Берет Ваш начальник, решая проблему, во внимание Ваше мнение?
+                </div>
+
+                <div class="poll-choice">
+                    <label class="label-block">
+                        <input type="radio" name="radio" class="radio-custom">
+                        <span class="radio-custom-view label">Всегда</span>
+                    </label>
+
+                    <label class="label-block">
+                        <input type="radio" name="radio" class="radio-custom">
+                        <span class="radio-custom-view label">Изредка</span>
+                    </label>
+
+                    <label class="label-block">
+                        <input type="radio" name="radio" class="radio-custom">
+                        <span class="radio-custom-view label">Нет</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="poll-item">
+                <div class="poll-item-text">
+                    Вам кажется, что Вы достаточно мотивированы своим начальником?
+                </div>
+
+                <div class="poll-choice">
+                    <label class="label-block">
+                        <input type="radio" name="radio" class="radio-custom">
+                        <span class="radio-custom-view label">Да</span>
+                    </label>
+
+                    <label class="label-block">
+                        <input type="radio" name="radio" class="radio-custom">
+                        <span class="radio-custom-view label">Не очень</span>
+                    </label>
+
+                    <label class="label-block">
+                        <input type="radio" name="radio" class="radio-custom">
+                        <span class="radio-custom-view label">Нет</span>
+                    </label>
+
+                    <label class="label-block">
+                        <input type="radio" name="radio" class="radio-custom" checked>
+                        <span class="radio-custom-view label">Свой вариант ответа</span>
+                    </label>
+
+                    <input type="text" class="ui-field-poll hide-placeholder" placeholder="Ваш ответ...">
+                </div>
+            </div>
+
+            <div class="poll-bottom">
+                <button class="btn btn-default">Отправить</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+//= template/footer.html
+
+//= template/scripts.html
+
+</body>
+</html>

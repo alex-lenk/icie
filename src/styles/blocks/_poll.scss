@@ -1,0 +1,36 @@
+.poll {
+    display: flex;
+    flex-direction: column;
+}
+
+.poll-item {
+    margin-bottom: 25px;
+    align-self: flex-start;
+}
+
+.poll-item-text {
+    margin-bottom: 23px;
+    font-size: 17px;
+    color: #390050;
+    @include SFProDisplayMedium;
+}
+
+.poll-choice {
+    display: flex;
+    flex-direction: column;
+    .label-block {
+        margin-bottom: 10px;
+        align-self: flex-start;
+    }
+}
+
+.ui-field-poll {
+    height: 47px;
+    padding-left: 26px;
+    border: 1px solid #E6DDEE;
+}
+
+.poll-bottom {
+    padding-top: 35px;
+    text-align: center;
+}

@@ -15,7 +15,7 @@
         height: 55px;
         padding: 21px 0 0;
         background: #fff;
-        box-shadow: 0 5px 18px 0 rgba(0,0,0,0.05);
+        box-shadow: 0 5px 18px 0 rgba(0, 0, 0, 0.05);
         font-size: 16px;
         color: #390050;
         text-transform: uppercase;
@@ -48,6 +48,24 @@
         }
         &::after {
             right: -2px;
+        }
+    }
+    &-default {
+        width: 200px;
+        height: 55px;
+        padding-top: 5px;
+        text-align: center;
+        font-size: 16px;
+        color: #390050;
+        border: 1px solid #E6DDEE;
+        letter-spacing: 0;
+        background: #E6DDEE;
+        text-transform: uppercase;
+        box-shadow: 0 5px 18px 0 rgba(0,0,0,0.05);
+        transition: all .3s ease;
+        @include SFProTextRegular;
+        &:hover {
+            background: #fff;
         }
     }
 }
