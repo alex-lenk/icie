@@ -5,13 +5,12 @@ var gulp = require('gulp'),
     prefixer = require('gulp-autoprefixer'),
     uglify = require('gulp-uglify'),
     sass = require('gulp-sass'),
-    sourcemaps = require('gulp-sourcemaps'),
     rigger = require('gulp-rigger'),
     cssmin = require('gulp-minify-css'),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
     rimraf = require('rimraf'),
-    includer = require("gulp-x-includer"),
+    includer     = require("gulp-x-includer"),
     browserSync = require("browser-sync"),
     reload = browserSync.reload,
     svgstore = require('gulp-svgstore'),
@@ -86,7 +85,7 @@ gulp.task('clean', function (cb) {
 
 gulp.task('html:build', function () {
     gulp.src(way.src.html)
-        .pipe(rigger())
+        .pipe(includer())
         .pipe(gulp.dest(way.build.html))
         .pipe(reload({
             stream: true
@@ -107,12 +106,9 @@ gulp.task('styles:build', function () {
     gulp.src(way.src.styles)
         .pipe(sass({
             includePaths: ['src/styles/'],
-            outputStyle: 'compressed',
-            sourceMap: true,
             errLogToConsole: true
         }))
         .pipe(prefixer())
-        .pipe(cssmin())
         .pipe(gulp.dest(way.build.css))
         .pipe(reload({
             stream: true
