@@ -1,0 +1,74 @@
+.notification {
+    background-color: #F9F9FC;
+    font-size: 15px;
+    color: #867A8A;
+    @include SFProTextRegular;
+    .container {
+        min-height: 60px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+    .notepad {
+        width: 18px;
+        height: 22px;
+        margin-right: 22px;
+        fill: #867A8A;
+        flex: none;
+    }
+    .arrow-right {
+        width: 11px;
+        height: 11px;
+        top: 4px;
+        right: 0;
+        position: absolute;
+        fill: #474CA6;
+    }
+    a {
+        margin-left: 8px;
+        padding-right: 17px;
+        display: inline-block;
+        position: relative;
+        text-transform: uppercase;
+        &:not(:hover) {
+            color: #474CA6;
+        }
+    }
+}
+
+.notification-text {
+    padding-right: 30px;
+}
+
+.close-notification {
+    top: 21px;
+    right: 18px;
+    position: absolute;
+    cursor: pointer;
+    .cross {
+        width: 17px;
+        height: 17px;
+        fill: #867A8A;
+        transition: fill 0.3s ease;
+    }
+    &:hover .cross {
+        fill: #474CA6;
+    }
+}
+
+.notification-fixed {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 95;
+    background-color: #fff;
+    .good-notice {
+        width: 20px;
+        height: 20px;
+        margin-right: 22px;
+        fill: #474CA6;
+    }
+}

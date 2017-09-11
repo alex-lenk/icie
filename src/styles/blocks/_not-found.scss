@@ -1,0 +1,47 @@
+.not-found {
+    padding-top: 66px;
+    text-align: center;
+    position: relative;
+    @include SFProDisplayMedium;
+    .broken-link {
+        width: 45px;
+        height: 45px;
+        top: 8px;
+        left: 50%;
+        margin-left: -22px;
+        position: absolute;
+        fill: #000000;
+    }
+    a {
+        color: #474CA6;
+    }
+}
+
+.not-found-title {
+    margin-bottom: 61px;
+    font-size: 17px;
+    letter-spacing: 0.85px;
+    color: #390050;
+    text-transform: uppercase;
+}
+
+.not-found-back {
+    font-size: 15px;
+    display: inline-flex;
+    justify-content: center;
+}
+
+.not-found-back-text {
+    margin-right: 10px;
+    padding-right: 22px;
+    color: #390050;
+    position: relative;
+    .double-arrow {
+        width: 10px;
+        height: 10px;
+        top: 5px;
+        right: 0;
+        fill: #390050;
+        position: absolute;
+    }
+}
