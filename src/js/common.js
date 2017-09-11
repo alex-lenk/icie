@@ -109,6 +109,12 @@ $(document).ready(function () {
             $(this).toggleClass("dropdown-item-opened");
         }
     );
+
+    $(".dropdown-link").click(
+        function () {
+            $(this).parent().toggleClass("dropdown-link-opened");
+        }
+    );
     // END
 
 
