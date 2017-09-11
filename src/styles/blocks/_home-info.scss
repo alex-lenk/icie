@@ -17,18 +17,22 @@
 }
 
 .home-info-all {
+    padding-right: 20px;
     text-transform: uppercase;
     font-size: 15px;
+    position: relative;
     @include SFProDisplayBold;
-    &::after {
-        margin-left: 6px;
-        top: 1px;
-        letter-spacing: -3px;
-        display: inline;
-        position: relative;
-        content: '››';
-        font-size: 21px;
-        @include SFProTextRegular;
+    .double-arrow {
+        width: 12px;
+        height: 12px;
+        top: 3px;
+        right: 0;
+        fill: #390050;
+        position: absolute;
+        transition: all .3s ease;
+    }
+    &:hover .double-arrow {
+        fill: #474CA6;
     }
 }
 
@@ -61,7 +65,6 @@
     line-height: 18px;
     margin-bottom: 13px;
     font-size: 15px;
-    @include SFProTextLight;
 }
 
 .last-news-panel {
@@ -71,6 +74,7 @@
 .last-news-date {
     font-size: 14px;
     color: #9B8EA0;
+    @include SFProTextRegular;
 }
 
 .our-project {

@@ -1,56 +1,60 @@
 <!doctype html>
 <html lang="ru">
-//= template/head.html
+<!-- include "template/head.html" -->
 <body class="page">
 <div class="wrapper">
-    //= template/header-page.html
+    <!-- include "template/header-page.html" -->
 
     <div class="container">
         <h1>Фотоотчеты</h1>
 
         <ul class="photoreports-list row list-unstyled">
             <li class="col-md-4 col-sm-6">
-                <div class="type-photo">
-                    <a href="photoreports-inner.html"><img src="img/example/photo@2x.jpg" alt=""></a>
-                    <span class="type-photo-element">
+                <a href="#" class="view-section">
+                    <span class="view-section-element">
+                        <img src="img/example/photo@2x.jpg" alt="">
                         <svg class="photo">
                             <use xlink:href="img/sprite.svg#photo"></use>
                         </svg>
                     </span>
-                </div>
-                <div class="photoreports-meta">
-                    <a href="photoreports-inner.html" class="photoreports-title">Расширенное заседание совета МКПП</a>
-                    <span class="photoreports-data">21.07.2017</span>
-                </div>
+                    <span class="section-title">
+                        Расширенное заседание совета МКПП
+                    </span>
+                </a>
+
+                <div class="section-data">21.07.2017</div>
             </li>
             <li class="col-md-4 col-sm-6">
-                <div class="type-photo">
-                    <a href="photoreports-inner.html"><img src="img/example/photo-2@2x.jpg" alt=""></a>
-                    <span class="type-photo-element">
+                <a href="#" class="view-section">
+                    <span class="view-section-element">
+                        <img src="img/example/photo-2@2x.jpg" alt="">
                         <svg class="photo">
                             <use xlink:href="img/sprite.svg#photo"></use>
                         </svg>
                     </span>
-                </div>
-                <div class="photoreports-meta">
-                    <a href="photoreports-inner.html" class="photoreports-title">Заседание Совета МКПП</a>
-                    <span class="photoreports-data">21.07.2017</span>
-                </div>
+                    <span class="section-title">
+                        Заседание Совета МКПП
+                    </span>
+                </a>
+
+                <div class="section-data">21.07.2017</div>
             </li>
             <li class="col-md-4 col-sm-6">
-                <div class="type-photo">
-                    <a href="photoreports-inner.html"><img src="img/example/photo-3@2x.jpg" alt=""></a>
-                    <span class="type-photo-element">
+                <a href="#" class="view-section">
+                    <span class="view-section-element">
+                        <img src="img/example/photo-3@2x.jpg" alt="">
                         <svg class="photo">
                             <use xlink:href="img/sprite.svg#photo"></use>
                         </svg>
                     </span>
-                </div>
-                <div class="photoreports-meta">
-                    <a href="photoreports-inner.html" class="photoreports-title">Расширенное заседание Президиума Совета МКПП в Баку</a>
-                    <span class="photoreports-data">21.07.2017</span>
-                </div>
+                    <span class="section-title">
+                        Расширенное заседание Президиума Совета МКПП в Баку
+                    </span>
+                </a>
+
+                <div class="section-data">21.07.2017</div>
             </li>
+
             <li class="col-md-4 col-sm-6">
                 <div class="type-photo">
                     <a href="photoreports-inner.html"><img src="img/example/photo-4@2x.jpg" alt=""></a>
@@ -141,9 +145,8 @@
     </div>
 </div>
 
-//= template/footer.html
-
-//= template/scripts.html
+<!-- include "template/footer.html" -->
+<!-- include "template/scripts.html" -->
 
 </body>
 </html>

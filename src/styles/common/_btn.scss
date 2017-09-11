@@ -19,35 +19,33 @@
         font-size: 16px;
         color: #390050;
         text-transform: uppercase;
+        @include SFProTextRegular;
         &:hover {
             color: #fff;
             background: #474CA6;
         }
     }
     &-arrow {
-        padding-right: 19px;
+        padding: 0 19px 0 0;
         font-size: 15px;
         color: #390050;
         text-transform: uppercase;
         position: relative;
         @include SFProDisplayBold;
-        &::before, &::after {
-            width: 7px;
-            height: 7px;
-            top: 6px;
-            border-right: 2px solid #390050;
-            border-bottom: 2px solid #390050;
-            -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
+        &:hover {
+            color: #474CA6;
+            .double-arrow {
+                fill: #474CA6;
+            }
+        }
+        .double-arrow {
+            width: 12px;
+            height: 12px;
+            top: 1px;
+            right: 0;
             position: absolute;
-            transition: all .3s ease;
-            content: '';
-        }
-        &::before {
-            right: 4px;
-        }
-        &::after {
-            right: -2px;
+            fill: #390050;
+            transition: all 0.3s ease;
         }
     }
     &-default {
@@ -61,7 +59,7 @@
         letter-spacing: 0;
         background: #E6DDEE;
         text-transform: uppercase;
-        box-shadow: 0 5px 18px 0 rgba(0,0,0,0.05);
+        box-shadow: 0 5px 18px rgba(0, 0, 0, 0.05);
         transition: all .3s ease;
         @include SFProTextRegular;
         &:hover {

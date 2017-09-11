@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="ru">
-//= template/head.html
+<!-- include "template/head.html" -->
 <body class="page">
 <div class="wrapper">
-    //= template/header-page.html
+    <!-- include "template/header-page.html" -->
 
     <div class="container">
         <h1>Свяжитесь с нами</h1>
@@ -46,7 +46,12 @@
                     </div>
 
                     <div class="contacts-form-bottom">
-                        <button class="btn btn-arrow">Отправить</button>
+                        <button class="btn btn-arrow">
+                            Отправить
+                            <svg class="double-arrow">
+                                <use xlink:href="img/sprite.svg#double-arrow"></use>
+                            </svg>
+                        </button>
                     </div>
                 </form>
             </div>
@@ -103,9 +108,8 @@
     </div>
 </div>
 
-//= template/footer.html
-
-//= template/scripts.html
+<!-- include "template/footer.html" -->
+<!-- include "template/scripts.html" -->
 
 </body>
 </html>

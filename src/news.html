@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="ru">
-//= template/head.html
+<!-- include "template/head.html" -->
 <body class="page">
 <div class="wrapper">
-    //= template/header-page.html
+    <!-- include "template/header-page.html" -->
 
     <div class="container">
         <h1>Новости МКПП</h1>
@@ -21,7 +21,12 @@
                                 предпринимателей... </p>
                             <div class="last-news-panel">
                                 <div class="last-news-date">21.07.2017</div>
-                                <a href="news-inner.html" class="read-more">Продолжить чтение</a>
+                                <a href="news-inner.html" class="read-more">
+                                    Продолжить чтение
+                                    <svg class="arrow-right">
+                                        <use xlink:href="img/sprite.svg#arrow-right"></use>
+                                    </svg>
+                                </a>
                             </div>
                         </div>
                     </li>
@@ -36,7 +41,12 @@
                                 предпринимателей... </p>
                             <div class="last-news-panel">
                                 <div class="last-news-date">21.07.2017</div>
-                                <a href="news-inner.html" class="read-more">Продолжить чтение</a>
+                                <a href="news-inner.html" class="read-more">
+                                    Продолжить чтение
+                                    <svg class="arrow-right">
+                                        <use xlink:href="img/sprite.svg#arrow-right"></use>
+                                    </svg>
+                                </a>
                             </div>
                         </div>
                     </li>
@@ -51,7 +61,12 @@
                                 предпринимателей... </p>
                             <div class="last-news-panel">
                                 <div class="last-news-date">21.07.2017</div>
-                                <a href="news-inner.html" class="read-more">Продолжить чтение</a>
+                                <a href="news-inner.html" class="read-more">
+                                    Продолжить чтение
+                                    <svg class="arrow-right">
+                                        <use xlink:href="img/sprite.svg#arrow-right"></use>
+                                    </svg>
+                                </a>
                             </div>
                         </div>
                     </li>
@@ -66,7 +81,12 @@
                                 предпринимателей... </p>
                             <div class="last-news-panel">
                                 <div class="last-news-date">21.07.2017</div>
-                                <a href="news-inner.html" class="read-more">Продолжить чтение</a>
+                                <a href="news-inner.html" class="read-more">
+                                    Продолжить чтение
+                                    <svg class="arrow-right">
+                                        <use xlink:href="img/sprite.svg#arrow-right"></use>
+                                    </svg>
+                                </a>
                             </div>
                         </div>
                     </li>
@@ -81,7 +101,12 @@
                                 предпринимателей... </p>
                             <div class="last-news-panel">
                                 <div class="last-news-date">21.07.2017</div>
-                                <a href="news-inner.html" class="read-more">Продолжить чтение</a>
+                                <a href="news-inner.html" class="read-more">
+                                    Продолжить чтение
+                                    <svg class="arrow-right">
+                                        <use xlink:href="img/sprite.svg#arrow-right"></use>
+                                    </svg>
+                                </a>
                             </div>
                         </div>
                     </li>
@@ -126,16 +151,20 @@
                         </li>
                     </ul>
 
-                    <div class="side-all"><a href="smi.html">Все Публикации</a></div>
+                    <div class="side-all"><a href="smi.html">
+                        Все Публикации
+                        <svg class="double-arrow">
+                            <use xlink:href="img/sprite.svg#double-arrow"></use>
+                        </svg>
+                    </a></div>
                 </div>
             </aside>
         </div>
     </div>
 </div>
 
-//= template/footer.html
-
-//= template/scripts.html
+<!-- include "template/footer.html" -->
+<!-- include "template/scripts.html" -->
 
 </body>
 </html>

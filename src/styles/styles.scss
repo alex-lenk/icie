@@ -27,6 +27,9 @@
 @import "blocks/contacts";
 @import "blocks/partners-page";
 @import "blocks/poll";
+@import "blocks/not-found";
+@import "blocks/notification";
+@import "blocks/view-section";
 
 .back-listing {
     position: relative;
@@ -66,92 +69,13 @@
     }
 }
 
-.type-photo-element {
-    width: 55px;
-    height: 38px;
-    opacity: 0.9;
-    background: #867A8A;
-    border-radius: 2px;
-    position: absolute;
-    margin: auto;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    pointer-events: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.3s ease;
-    .photo {
-        width: 18px;
-        height: 18px;
-        fill: #fff;
-        transition: all 0.3s ease;
-    }
-}
-
-.type-photo {
-    position: relative;
-    display: block;
-    &:hover .type-photo-element {
-        width: 100%;
-        height: 100%;
-        .photo {
-            width: 30px;
-            height: 30px;
-        }
-    }
-}
-
 .photoreports-inner-list li {
     margin-bottom: 23px;
 }
 
-.type-video {
-    margin-bottom: 10px;
-    position: relative;
-    display: block;
-    border-radius: 1px;
-    cursor: pointer;
-    &:hover .type-video-element {
-        width: 100%;
-        height: 100%;
-        box-shadow: 0 5px 18px 0 rgba(71, 76, 166, .2);
-    }
-}
-
-.type-video-element {
-    border-radius: 2px;
-    position: absolute;
-    margin: auto;
-    top: 0;
-    left: 0;
-    right: 0;
-    opacity: .9;
-    bottom: 0;
-    background: #D8362A;
-    width: 55px;
-    height: 38px;
-    transition: all .3s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    &::before {
-        margin-right: -13px;
-        border: 10px solid transparent;
-        border-left: 18px solid #fff;
-        content: '';
-    }
-}
-
-.content-gutters {
-    margin-bottom: 70px;
-    
-    .pull-left {
-        margin-right: 34px;
-        margin-bottom: 15px;
-    }
+.content-gutters .pull-left {
+    margin-right: 34px;
+    margin-bottom: 15px;
 }
 
 .title-source {
@@ -167,16 +91,31 @@
     @include SFProDisplayMedium;
 }
 
-.read-more::after {
-    color: #474CA6;
-}
-
 .presentation-item {
-    .type-photo-element {
+    .view-section-element::before {
         background: #474CA6;
     }
-    .photoreports-title {
+    .section-title {
         font-size: 17px;
         @include SFProDisplayMedium;
+    }
+}
+
+.read-more {
+    padding-right: 15px;
+    margin-left: auto;
+    margin-top: auto;
+    text-transform: uppercase;
+    font-size: 13px;
+    position: relative;
+    align-self: flex-end;
+    @include SFProTextRegular;
+    .arrow-right {
+        width: 10px;
+        height: 10px;
+        top: 4px;
+        right: 0;
+        position: absolute;
+        fill: #474CA6;
     }
 }

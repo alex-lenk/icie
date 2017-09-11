@@ -15,6 +15,9 @@
     padding: 13px 20px 15px 0;
     display: flex;
     flex-direction: column;
+    .read-more:not(:hover) .arrow-right {
+        fill: #390050;
+    }
 }
 
 .first-face-title {
@@ -23,92 +26,12 @@
     font-size: 17px;
     color: #390050;
     line-height: 20px;
+    @include SFProTextRegular;
 }
 
 .first-face-text {
     line-height: 18px;
     font-size: 15px;
     color: #2F2732;
-    @include SFProTextLight
 }
 
-.read-more {
-    padding-right: 15px;
-    margin-left: auto;
-    margin-top: auto;
-    text-transform: uppercase;
-    font-size: 13px;
-    position: relative;
-    align-self: flex-end;
-    &::after {
-        width: 7px;
-        height: 7px;
-        margin-left: 10px;
-        border-left: 2px solid;
-        border-bottom: 2px solid;
-        transform: rotate(-135deg);
-        position: absolute;
-        right: 0;
-        top: 5px;
-        content: '';
-    }
-}
-
-.article-media {
-    margin-bottom: 10px;
-    position: relative;
-    display: block;
-    border-radius: 1px;
-}
-
-.article-item-title {
-    font-size: 14px;
-    color: #390050;
-    line-height: 17px;
-}
-
-.article-type-photo {
-    opacity: 0.9;
-    background: #867A8A;
-    border-radius: 2px;
-    position: absolute;
-    width: 55px;
-    height: 38px;
-    margin: auto;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .photo {
-        width: 18px;
-        height: 18px;
-        fill: #fff;
-    }
-}
-
-.article-type-video {
-    opacity: 0.9;
-    background: #D8362A;
-    border-radius: 2px;
-    position: absolute;
-    width: 55px;
-    height: 38px;
-    margin: auto;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    transition: all 0.3s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    &::before {
-        margin-right: -13px;
-        border: 10px solid transparent;
-        border-left: 18px solid #fff;
-        content: '';
-    }
-}

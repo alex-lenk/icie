@@ -2,25 +2,24 @@
 @import "mixin";
 
 html {
-    font-size: 16px;
     height: 100%;
 }
 
 html,
 body {
     width: 100%;
+    font-size: 16px;
+    @include SFProTextLight;
 }
 
 body {
+    min-height: 100vh;
     color: #2F2732;
     line-height: 1.4;
     background-repeat: no-repeat;
     background-color: #fff;
     display: flex;
-    min-height: 100vh;
     flex-direction: column;
-    @include font-size(16px);
-    @include SFProTextRegular;
 }
 
 a, .as-link {
@@ -28,7 +27,7 @@ a, .as-link {
     text-decoration: none;
     transition: color 0.3s ease;
     &:hover {
-        color: #178ace;
+        color: #474CA6;
     }
     &:focus {
         outline: none;

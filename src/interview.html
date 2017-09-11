@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="ru">
-//= template/head.html
+<!-- include "template/head.html" -->
 <body class="page">
 <div class="wrapper">
-    //= template/header-page.html
+    <!-- include "template/header-page.html" -->
 
     <div class="container">
         <h1>Интервью</h1>
@@ -18,7 +18,12 @@
 
                     <div class="interview-panel">
                         <div class="interview-date">21.07.2017</div>
-                        <a href="#" class="read-more">Читать</a>
+                        <a href="#" class="read-more">
+                            Читать
+                            <svg class="arrow-right">
+                                <use xlink:href="img/sprite.svg#arrow-right"></use>
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </li>
@@ -33,7 +38,12 @@
 
                     <div class="interview-panel">
                         <div class="interview-date">21.07.2017</div>
-                        <a href="#" class="read-more">Читать</a>
+                        <a href="#" class="read-more">
+                            Читать
+                            <svg class="arrow-right">
+                                <use xlink:href="img/sprite.svg#arrow-right"></use>
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </li>
@@ -48,7 +58,12 @@
 
                     <div class="interview-panel">
                         <div class="interview-date">21.07.2017</div>
-                        <a href="#" class="read-more">Читать</a>
+                        <a href="#" class="read-more">
+                            Читать
+                            <svg class="arrow-right">
+                                <use xlink:href="img/sprite.svg#arrow-right"></use>
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </li>
@@ -63,7 +78,12 @@
 
                     <div class="interview-panel">
                         <div class="interview-date">21.07.2017</div>
-                        <a href="#" class="read-more">Читать</a>
+                        <a href="#" class="read-more">
+                            Читать
+                            <svg class="arrow-right">
+                                <use xlink:href="img/sprite.svg#arrow-right"></use>
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </li>
@@ -71,9 +91,8 @@
     </div>
 </div>
 
-//= template/footer.html
-
-//= template/scripts.html
+<!-- include "template/footer.html" -->
+<!-- include "template/scripts.html" -->
 
 </body>
 </html>

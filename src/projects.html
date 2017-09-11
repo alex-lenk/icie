@@ -1,28 +1,30 @@
 <!doctype html>
 <html lang="ru">
-//= template/head.html
+<!-- include "template/head.html" -->
 <body class="page">
 <div class="wrapper">
-    //= template/header-page.html
+    <!-- include "template/header-page.html" -->
 
     <div class="container">
         <h1>Проекты и презентации</h1>
 
         <ul class="photoreports-list row list-unstyled">
             <li class="presentation-item col-md-4 col-sm-6">
-                <a href="#" class="type-photo" target="_blank" rel="nofollow">
-                    <img src="img/example/photo-22@2x.jpg" alt="">
-                    <span class="type-photo-element">
-                        <svg class="photo">
-                            <use xlink:href="img/sprite.svg#photo"></use>
+                <a href="#" class="view-section" target="_blank" rel="nofollow">
+                    <span class="view-section-element">
+                        <img src="img/example/photo-22@2x.jpg" alt="">
+                        <svg class="visible">
+                            <use xlink:href="img/sprite.svg#visible"></use>
                         </svg>
                     </span>
+                    <span class="section-title">
+                        Комитет МКПП по вопросам обеспечения безопасности в сфере предпринимательской деятельности
+                    </span>
                 </a>
-                <div class="photoreports-meta">
-                    <a href="#" class="photoreports-title">Комитет МКПП по вопросам обеспечения безопасности в сфере предпринимательской деятельности</a>
-                    <span class="photoreports-data">21.07.2017</span>
-                </div>
+                <span class="section-data">21.07.2017</span>
             </li>
+
+            <!--
             <li class="presentation-item col-md-4 col-sm-6">
                 <a href="#" class="type-photo" target="_blank" rel="nofollow">
                     <img src="img/example/photo-23@2x.jpg" alt="">
@@ -106,14 +108,13 @@
                     <a href="#" class="photoreports-title">Презентация комитета по АПК №1</a>
                     <span class="photoreports-data">21.07.2017</span>
                 </div>
-            </li>
+            </li>-->
         </ul>
     </div>
 </div>
 
-//= template/footer.html
-
-//= template/scripts.html
+<!-- include "template/footer.html" -->
+<!-- include "template/scripts.html" -->
 
 </body>
 </html>

@@ -1,9 +1,49 @@
 <!doctype html>
 <html lang="ru">
-//= template/head.html
+<!-- include "template/head.html" -->
 <body class="page">
 <div class="wrapper">
-    //= template/header-page.html
+    <div class="notification">
+        <div class="container">
+            <svg class="notepad">
+                <use xlink:href="img/sprite.svg#notepad"></use>
+            </svg>
+            <div class="notification-text">
+                Новый опрос! Пожалуста, ответьте на несколько вопросов, это займет не более 2-ух минут!
+                <a href="#">
+                    Перейти
+                    <svg class="arrow-right">
+                        <use xlink:href="img/sprite.svg#arrow-right"></use>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="close-notification">
+                <svg class="cross">
+                    <use xlink:href="img/sprite.svg#cross"></use>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <div class="notification notification-fixed">
+        <div class="container">
+            <svg class="good-notice">
+                <use xlink:href="img/sprite.svg#good-notice"></use>
+            </svg>
+            <div class="notification-text">
+                Спасибо что ответили на наши вопросы!
+            </div>
+
+            <div class="close-notification">
+                <svg class="cross">
+                    <use xlink:href="img/sprite.svg#cross"></use>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <!-- include "template/header-page.html" -->
 
     <div class="container">
         <h1>Пишем заголовок опроса</h1>
@@ -115,9 +155,8 @@
     </div>
 </div>
 
-//= template/footer.html
-
-//= template/scripts.html
+<!-- include "template/footer.html" -->
+<!-- include "template/scripts.html" -->
 
 </body>
 </html>

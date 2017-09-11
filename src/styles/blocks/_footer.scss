@@ -23,6 +23,9 @@ footer {
 
 .footer-nav a {
     color: #474CA6;
+    &:hover {
+        color: #867A8A;
+    }
 }
 
 .footer-menu {

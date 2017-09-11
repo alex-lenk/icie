@@ -20,12 +20,18 @@
     .arrow-long {
         width: 15px;
         height: 15px;
-        margin-left: 4px;
+        right: -22px;
+        top: 0;
         fill: #390050;
+        position: absolute;
         transition: fill 0.3s ease;
     }
-    a:hover {
-        .arrow-long {
+    a {
+        line-height: .9;
+        display: inline-block;
+        border-bottom: 2px solid;
+        position: relative;
+        &:hover .arrow-long {
             fill: #178ace;
         }
     }
