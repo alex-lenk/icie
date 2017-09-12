@@ -119,3 +119,21 @@
         fill: #474CA6;
     }
 }
+
+@keyframes fadeRight-menu {
+    0% {
+        opacity: 0;
+        transform: translate(-100%, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+.nav-opened .menu li {
+    animation: fadeRight-menu 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) both;
+    transition: all 350ms ease-in-out;
+    animation-delay: 350ms;
+    
+}

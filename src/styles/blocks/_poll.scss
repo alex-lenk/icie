@@ -28,6 +28,10 @@
     height: 47px;
     padding-left: 26px;
     border: 1px solid #E6DDEE;
+    transition: all .3s ease;
+    &:focus {
+        border-color: #6BC5D2;
+    }
 }
 
 .poll-bottom {

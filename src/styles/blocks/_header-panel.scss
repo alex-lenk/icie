@@ -31,6 +31,23 @@
     }
 }
 
+.dropdown-link {
+    cursor: pointer;
+    color: #390050;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    &:hover {
+        color: #474CA6;
+        &::after {
+            border-left-color: #474CA6;
+            border-bottom-color: #474CA6;
+        }
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
 .search-top {
     height: 100%;
     margin-left: auto;
@@ -72,6 +89,7 @@
     padding: 0 30px;
     border: 0;
     background-color: #fff;
+    border-radius: 0;
 }
 
 .search-top-btn {

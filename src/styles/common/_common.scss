@@ -44,7 +44,7 @@ img {
 
 b, strong {
     font-weight: normal;
-    @include SFProDisplayBold;
+    @include SFProDisplayMedium;
 }
 
 h2, h3, h4, h5 {
@@ -103,7 +103,7 @@ h6 {
     }
     &-bold {
         font-weight: normal;
-        @include SFProDisplayBold;
+        @include SFProDisplayMedium;
     }
     &-nowrap {
         white-space: nowrap;
@@ -212,4 +212,14 @@ button, input, select, textarea {
     margin-bottom: 120px;
     overflow-x: hidden;
     flex: 1;
+}
+
+.alignright {
+    float: right;
+    margin: 15px 0 15px 15px;
+}
+
+.alignleft {
+    float: left;
+    margin: 15px 15px 15px 0;
 }
