@@ -13,8 +13,10 @@ $(document).ready(function () {
         document.head.appendChild(msViewportStyle)
     }
 
-    // BEGIN: Открытие и закрытие поисковой панели в шапке сайта
+
+// BEGIN: Открытие и закрытие поисковой панели в шапке сайта
     var searchTop = $('.search-top'),
+        searchTopClose = $('.search-top-close'),
         searchTopOpened = 'search-top-opened';
 
     $('.search-top-icon').on('click', function () {
@@ -25,13 +27,17 @@ $(document).ready(function () {
         }
     });
 
+    searchTopClose.on('click', function () {
+        searchTop.removeClass(searchTopOpened);
+    });
+
     $(document).click(function (event) {
         if ($(event.target).closest('.search-top').length)
             return;
         searchTop.removeClass(searchTopOpened);
         event.stopPropagation();
     });
-    // END
+// END
 
 
     // BEGIN: Открытие и закрытие языковой панели в шапке сайта
@@ -96,19 +102,38 @@ $(document).ready(function () {
     // END
 
 
-    // BEGIN: Открытие и закрытие основного меню сайта
-    $(".menu-toggle, .close-menu").click(
-        function () {
-            $('.menu-wrap').toggleClass("nav-opened");
-            $('body').toggleClass("overflow");
-        }
-    );
+    $('body').on('mouseup', function (e) {
 
-    $(".dropdown-item").click(
-        function () {
-            $(this).toggleClass("dropdown-item-opened");
+        if (!$(e.target).closest("form.search-top-opened").length) {
+            $('form.search-top').removeClass('search-top-opened');
         }
-    );
+
+        if (!$(e.target).closest('.dropdown-link-opened').length) {
+            $('ul.list-unstyled').find('li').removeClass('dropdown-link-opened');
+        }
+
+        if (!$(e.target).closest('.language-bar-opened').length) {
+            $('.language-bar').removeClass('language-bar-opened');
+        }
+
+        if (!$(e.target).closest('.grid-more-opened').length) {
+            $('.grid-text').removeClass('grid-more-opened');
+        }
+
+    });
+
+
+    // BEGIN: Открытие и закрытие основного меню сайта
+
+
+    $(".menu-toggle, .close-menu").click(function () {
+        $(".menu-wrap").toggleClass("nav-opened");
+        $("body").toggleClass("overflow");
+    });
+
+    $(".dropdown-item").click(function () {
+        $(this).toggleClass("dropdown-item-opened")
+    });
 
     $(".dropdown-link").click(
         function () {
@@ -116,6 +141,13 @@ $(document).ready(function () {
         }
     );
     // END
+
+
+    $(".grid-text p").click(
+        function () {
+            $(this).parent().toggleClass("grid-more-opened");
+        }
+    );
 
 
     // BEGIN: Инициализация плагина для обрезки лишнего текст в блоках на главной
@@ -173,4 +205,7 @@ $(document).ready(function () {
             $('.contacts-form-wrap').toggleClass("contacts-toggle-opened");
         }
     );
+    //END
+
+
 });

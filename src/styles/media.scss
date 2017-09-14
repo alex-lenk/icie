@@ -138,13 +138,15 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
         right: 0;
         .search-top-btn {
             padding: 0 10px;
-            top: 2px;
-            right: 13px;
+            top: 4px;
             background-color: transparent;
         }
     }
     .search-top-field {
         padding-left: 21px;
+    }
+    .search-top-close {
+        right: 60px;
     }
     
     .land {
@@ -289,6 +291,15 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
     }
     .wrapper {
         margin-bottom: 100px;
+    }
+    
+    .logo {
+        max-width: 123px;
+        max-height: 50px;
+    }
+    
+    .search-top-close {
+        top: 18px;
     }
     
     .ui-group {
@@ -736,12 +747,16 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
     
     .search-top {
         padding-right: 10px;
+        z-index: 25;
     }
     .search-top-input {
         width: 100%;
         max-width: calc(100% - 40px);
         right: 20px;
-        top: 87px;
+        top: 25px;
+    }
+    .search-top-btn {
+        right: 10px;
     }
     
     .header-content {
@@ -922,90 +937,11 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
     }
 }
 
-@include between('sm', 'md') {
-    .partners-page-item br {
-        display: none;
-    }
-    
-    .journal-item {
-        padding-bottom: 40px;
-        &:not(:last-child) {
-            margin-bottom: 35px;
-        }
-    }
-    
-    .back-listing, .inner-title-source {
-        padding-left: 54px;
-    }
-    
-    .header-panel {
-        margin-bottom: 135px;
-    }
-    
-    .search-top {
-        padding-right: 30px;
-        position: relative;
-    }
-    .search-top-input {
-        top: 5px;
-    }
-    .search-top-opened .search-top-input {
-        width: 289px;
-    }
-    
-    .article-item {
-        width: calc(100% / 3 - 18px);
-    }
-    
-    .footer-contacts li:not(:first-child) {
-        text-align: center;
-    }
-    .footer-contacts a {
-        padding-left: 30px;
-    }
-    
-    .first-face-content {
-        padding-top: 26px;
-    }
-    
-    .sidebar {
-        margin-bottom: 15px;
-    }
-    .sidebar-menu {
-        column-gap: 0;
-        a {
-            padding-left: 20px;
-            position: relative;
-            display: inline-block;
-            &::before {
-                left: 0;
-                margin-left: 0;
-                position: absolute;
-            }
-            &:hover::before {
-                left: 3px;
-            }
-        }
-    }
-    
-    .interview {
-        margin-bottom: 60px;
-    }
-    
-    .interview-media {
-        max-width: 150px;
-    }
-    
-    .home-header {
-        height: 660px;
-        margin-bottom: 30px;
-    }
-    .header-info {
-        margin-bottom: 110px;
-    }
-}
-
 @include at('md') {
+    .search-top-close {
+        top: 22px;
+    }
+    
     .contacts-form-wrap {
         padding-right: 0;
         flex-basis: 60%;
@@ -1078,6 +1014,7 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
         right: 0;
         font-size: 18px;
         z-index: 20;
+        overflow: hidden;
         background-color: #fff;
         box-shadow: 0 5px 18px 0 rgba(0, 0, 0, 0.05);
         transition: opacity 0.3s ease;
@@ -1146,6 +1083,14 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
             }
         }
     }
+    .search-top {
+        height: 65px !important;
+    }
+    .search-top-input {
+        width: 760px !important;
+        height: 65px;
+        margin-right: -171px !important;;
+    }
     
     .footer-nav ul:first-of-type {
         padding-left: 38px;
@@ -1171,6 +1116,11 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
 }
 
 @include at('sm') {
+    .search-top-opened .search-top-input {
+        width: 540px;
+        margin-right: -166px;
+    }
+    
     .first-face-text {
         width: 310px;
         height: 60px;
@@ -1214,10 +1164,10 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
     .grid-item {
         width: 50%;
     }
-    .grid-item-wrap:hover .grid-more {
+/*    .grid-item-wrap:hover .grid-more {
         width: 290px;
         left: -18px;
-    }
+    }*/
     
     .photoreports-list li {
         margin-bottom: 45px;
@@ -1253,6 +1203,11 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
 }
 
 @include from('md') {
+    .logo {
+        max-width: 170px;
+        max-height: 65px;
+    }
+    
     .partners-page-text {
         letter-spacing: -0.2px;
     }
@@ -1478,7 +1433,8 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
         padding-right: 10px;
     }
     .search-top-btn {
-        display: none;
+        right: -32px;
+        top: 4px;
     }
     
     .search-top-input {
@@ -1534,10 +1490,6 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
         &:not(:last-child) {
             margin-bottom: 32px;
         }
-    }
-    
-    .partners {
-        margin-bottom: 90px;
     }
     
     .footer-contacts li {
@@ -1656,6 +1608,105 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
     
     .first-face-text {
         max-width: 362px;
+    }
+}
+
+@include between('sm', 'md') {
+    .partners-page-item br {
+        display: none;
+    }
+    
+    .journal-item {
+        padding-bottom: 40px;
+        &:not(:last-child) {
+            margin-bottom: 35px;
+        }
+    }
+    
+    .back-listing, .inner-title-source {
+        padding-left: 54px;
+    }
+    
+    .header-panel {
+        margin-bottom: 135px;
+    }
+    
+    .search-top {
+        padding-right: 30px;
+        z-index: 26;
+        position: relative;
+    }
+    .search-top-input {
+        right: 50%;
+        top: 0;
+        padding: 0 20px;
+    }
+    .search-top-btn {
+        top: 4px;
+        right: 30px;
+    }
+    .search-top-close {
+        right: 80px;
+    }
+    .search-top-opened {
+        width: 100%;
+        height: 55px;
+        padding-right: 0;
+        .search-top-icon {
+            opacity: 0;
+            position: absolute;
+        }
+    }
+    
+    .article-item {
+        width: calc(100% / 3 - 18px);
+    }
+    
+    .footer-contacts li:not(:first-child) {
+        text-align: center;
+    }
+    .footer-contacts a {
+        padding-left: 30px;
+    }
+    
+    .first-face-content {
+        padding-top: 26px;
+    }
+    
+    .sidebar {
+        margin-bottom: 15px;
+    }
+    .sidebar-menu {
+        column-gap: 0;
+        a {
+            padding-left: 20px;
+            position: relative;
+            display: inline-block;
+            &::before {
+                left: 0;
+                margin-left: 0;
+                position: absolute;
+            }
+            &:hover::before {
+                left: 3px;
+            }
+        }
+    }
+    
+    .interview {
+        margin-bottom: 60px;
+    }
+    
+    .interview-media {
+        max-width: 150px;
+    }
+    
+    .home-header {
+        height: 660px;
+        margin-bottom: 30px;
+    }
+    .header-info {
+        margin-bottom: 110px;
     }
 }
 

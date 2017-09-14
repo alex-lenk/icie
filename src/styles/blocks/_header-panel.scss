@@ -4,7 +4,6 @@
 }
 
 .logo {
-    width: 164px;
     z-index: 7;
 }
 
@@ -51,6 +50,7 @@
 .search-top {
     height: 100%;
     margin-left: auto;
+    transition: all 0.3s ease;
     .search {
         width: 18px;
         height: 18px;
@@ -81,6 +81,12 @@
     opacity: 0;
     pointer-events: none;
     transition: all .3s ease;
+    .cross {
+        width: 10px;
+        height: 10px;
+        fill: #867A8A;
+        transition: fill 0.3s ease;
+    }
 }
 
 .search-top-field {
@@ -98,14 +104,32 @@
     right: 0;
     position: absolute;
     border: 0;
-    background-color: #fff;
+    background-color: transparent;
     cursor: pointer;
     z-index: 5;
+    transition: all .3s ease;
 }
 
-.search-top-opened .search-top-input {
-    opacity: 1;
-    pointer-events: auto;
+.search-top-opened {
+    .search {
+        fill: #474CA6;
+    }
+    .search-top-input {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
+.search-top-close {
+    position: absolute;
+    top: 23px;
+    right: 21px;
+    cursor: pointer;
+    &:hover {
+        .cross {
+            fill: #474CA6;
+        }
+    }
 }
 
 .language-bar {

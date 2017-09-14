@@ -54,6 +54,7 @@ textarea.ui-field {
     &::after {
         width: 0;
         height: 1px;
+        margin-top: -1px;
         top: 100%;
         left: 0;
         position: absolute;
@@ -86,4 +87,36 @@ textarea.ui-field {
             width: 100%;
         }
     }
+}
+
+.ui-error:not(.field-filled) {
+    .ui-placeholder::after {
+        width: 100%;
+        background-color: #DF6363;
+    }
+    .ui-placeholder-text {
+        opacity: 0;
+    }
+    .ui-field:focus {
+        ~ .ui-error-text {
+            opacity: 0;
+        }
+        + .ui-placeholder .ui-placeholder-text {
+            opacity: 1;
+        }
+    }
+    .ui-error-text {
+        opacity: 1;
+    }
+}
+
+.ui-error-text {
+    top: 22px;
+    left: 13px;
+    position: absolute;
+    font-size: 14px;
+    color: #DF6363;
+    opacity: 0;
+    pointer-events: none;
+    @include SFProTextRegular;
 }

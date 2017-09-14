@@ -5,9 +5,18 @@
 }
 
 .partners-img {
-    max-height: 54px;
+    max-height: 65px;
+    max-width: 100px;
+    display: block;
     img {
-        max-height: 54px;
+        max-height: 65px;
+        opacity: .6;
+        filter: grayscale(100%);
+        transition: all 0.3s ease;
+    }
+    &:hover img {
+        filter: none;
+        opacity: 1;
     }
 }
 

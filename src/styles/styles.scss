@@ -137,3 +137,129 @@
     animation-delay: 350ms;
     
 }
+
+.grid-item-wrap {
+    width: 100%;
+    padding: 12px 10px 2px 16px;
+    background: #fff;
+    position: relative;
+    box-shadow: 0 5px 18px 0 rgba(#000, .05);
+    transition: all .6s ease;
+}
+
+.grid-title {
+    min-height: 40px;
+    line-height: 20px;
+    padding-left: 42px;
+    font-size: 17px;
+    display: block;
+    position: relative;
+    @include SFProDisplayMedium;
+    &::before {
+        background-image: url(../img/sprite-flags.png);
+        background-repeat: no-repeat;
+        background-size: 155px 144px;
+        width: 26px;
+        height: 19px;
+        left: 0;
+        top: 2px;
+        content: '';
+        position: absolute;
+        box-shadow: 0 0 18px 0 rgba(0, 0, 0, .1);
+    }
+}
+
+.grid-item {
+    position: relative;
+    padding: 20px;
+}
+
+.grid-text {
+    margin-top: 10px;
+    position: relative;
+    p {
+        font-size: 13px;
+        line-height: 16px;
+        cursor: pointer;
+        position: relative;
+        z-index: 50;
+        transition: all .3s ease;
+        @include SFProTextLight;
+    }
+    &:hover p {
+        color: #474CA6;
+    }
+}
+
+.grid-more {
+    width: 291px;
+    padding: 14px 17px 13px;
+    top: 50%;
+    transform: translate(-40px, -50%);
+    right: 100%;
+    background: #fff;
+    z-index: -1;
+    position: absolute;
+    opacity: 0;
+    transition: all .3s ease;
+    box-shadow: 0 5px 18px 0 rgba(71, 76, 166, 0.2);
+    &::before, &::after {
+        top: 50%;
+        transform: translateY(-50%);
+        right: -20px;
+        position: absolute;
+        content: '';
+        border: 10px solid transparent;
+        border-left-color: #fff;
+    }
+    &::before {
+        border-left-color: rgba(71, 76, 166, 0.20);
+    }
+}
+
+.grid-more-persona {
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #2F2732;
+    @include SFProTextRegular;
+}
+
+.grid-more-contacts {
+    margin-bottom: 5px;
+    padding-left: 0;
+    list-style: none;
+    font-size: 14px;
+    color: #2F2732;
+    line-height: 20px;
+    @include SFProTextLight;
+}
+
+.grid-more-link {
+    padding-left: 22px;
+    color: #474CA6;
+    font-size: 14px;
+    display: inline-block;
+    position: relative;
+    @include SFProTextLight;
+    .link {
+        width: 12px;
+        height: 12px;
+        margin-right: 10px;
+        left: 0;
+        top: 3px;
+        fill: #474CA6;
+        display: block;
+        position: absolute;
+        transition: fill 0.3s ease;
+    }
+    &:hover .link {
+        fill: #178ace;
+    }
+}
+
+.grid-more-opened {
+    .grid-more {
+        opacity: 1;
+        z-index: 55;
+    }
+}

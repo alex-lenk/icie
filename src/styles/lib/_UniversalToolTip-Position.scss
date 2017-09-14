@@ -1,0 +1,113 @@
+body {
+ counter-reset: tipcount;
+ counter-reset: hovertipcount;
+}
+.tip {
+ display: inline-block;
+ position: relative;
+ padding: 0;
+ margin: 0;
+ outline: 0;
+ border: 0;
+ height: 0;
+ width: 1px;
+ background: transparent;
+}
+.tipbubble {
+ display: none;
+ position: absolute;
+ z-index: 9998;
+ cursor: default;
+ text-align: left;
+ white-space: normal;
+ min-height: 50px;
+ width: 220px;
+ }
+.tipbubble img {
+ max-width: 60%;
+ height: auto;
+ margin: 3px;
+ float: left;
+}
+.tipbubble > .close {
+ display: inline-block;
+ position: absolute;
+ top: 0;
+ font: normal bold 14px/14px Comic Sans MS;
+ cursor: pointer;
+ margin: 2px;
+ padding: 0 2px;
+ text-align: center;
+}
+.tipbubble.right-tip-pos > .close {
+ right:0;
+}
+.tipbubble.left-tip-pos > .close {
+ left:0;
+}
+.tipbubble.right-tip-pos {
+ left: 100%;
+ margin-left: 10px;
+ margin-top: -25px;
+ padding: 5px 20px 7px 7px;
+}
+.tipbubble.left-tip-pos {
+ right: 100%;
+ margin-right: 10px;
+ margin-top: -25px;
+ padding: 5px 7px 7px 20px;
+}
+.tipbubble.upper-pos {
+ bottom: -15px;
+}
+.tipbubble:before,
+.tipbubble:after {
+ content:"";
+ position: absolute;
+ width: 0px;
+ height: 0px;
+ border-style: solid;
+ border-radius: 1px;
+ border-color: transparent
+}
+.tipbubble.right-tip-pos:before  {
+ border-width: 8px 12px 8px 0;
+ left: -11px;
+ top: 10px;
+}
+.tipbubble.left-tip-pos:before {
+ border-width: 8px 0 8px 12px;
+ right: -11px;
+ top: 10px;
+}
+.tipbubble.right-tip-pos:after {
+ border-width: 8px 10px 8px 0;
+ left: -9px;
+ top: 10px;
+}
+.tipbubble.left-tip-pos:after {
+ border-width: 8px 0 8px 10px;
+ right: -9px;
+ top: 10px;
+}
+.tipbubble.upper-pos:before,
+.tipbubble.upper-pos:after {
+ top: 100%;
+ margin-top: -30px;
+}
+a.hovertip{
+ cursor: pointer;
+}
+.hovertip {
+ display:inline-block;
+ position:relative;
+ cursor: default;
+}
+.wikitip:after {
+ counter-increment: tipcount;
+ content: "["counter(tipcount)"]";
+}
+.hoverwikitip:after {
+ counter-increment: hovertipcount;
+ content: "["counter(hovertipcount)"]";
+}

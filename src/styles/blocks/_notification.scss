@@ -51,7 +51,7 @@
         width: 17px;
         height: 17px;
         fill: #867A8A;
-        transition: fill 0.3s ease;
+        transition: all 0.3s ease;
     }
     &:hover .cross {
         fill: #474CA6;
@@ -64,12 +64,21 @@
     bottom: 0;
     left: 0;
     z-index: 95;
-    background-color: #fff;
-    border-top: 1px solid #E1F5F2;
+    background-color: #474CA6;
     .good-notice {
         width: 20px;
         height: 20px;
         margin-right: 22px;
-        fill: #474CA6;
+        fill: #fff;
+    }
+    .cross {
+        fill: #fff;
+    }
+    .notification-text {
+        color: #fff;
+    }
+    .close-notification:hover .cross {
+        fill: #fff;
+        opacity: .9;
     }
 }
