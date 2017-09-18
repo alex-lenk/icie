@@ -214,18 +214,8 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
         align-self: flex-end;
     }
     
-    .our-project-list {
-        padding-bottom: 20px;
-        margin-bottom: 20px;
-        display: flex;
-        justify-content: space-between;
-    }
     .our-project-item {
         position: relative;
-        max-width: calc(100% / 2 - 20px);
-        &:last-of-type {
-            display: none;
-        }
         .last-news-date {
             padding: 3px 3px 2px;
             top: 13px;
@@ -236,10 +226,6 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
     }
     .our-project-media {
         margin-bottom: 16px;
-    }
-    
-    .partners {
-        margin-bottom: 95px;
     }
     
     footer {
@@ -575,7 +561,7 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
     .gallery-prev, .gallery-next {
         display: none;
     }
-    .swiper-slide {
+    .gallery .swiper-slide {
         width: 195px;
     }
     .gallery-item {
@@ -587,6 +573,30 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
     h1 {
         margin-bottom: 45px;
         line-height: 32px;
+    }
+    
+    .our-project-list {
+        width: 100%;
+        padding: 0;
+    }
+    .our-project {
+        padding-right: 0;
+        padding-left: 0;
+        .home-info-title {
+            width: calc(100% - 40px);
+            margin-left: 20px;
+        }
+        .swiper-slide {
+            max-width: 270px;
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+        .home-info-all {
+            display: none;
+        }
+    }
+    .our-project-item {
+        flex: none;
     }
     
     .header-title {
@@ -896,10 +906,6 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
     .read-more {
         font-size: 3.1vw;
     }
-    
-    .last-news-title {
-        font-size: 4.5vw;
-    }
 }
 
 @media (max-width: 374px) {
@@ -1164,10 +1170,11 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
     .grid-item {
         width: 50%;
     }
-/*    .grid-item-wrap:hover .grid-more {
-        width: 290px;
-        left: -18px;
-    }*/
+    
+    .our-project-list {
+        background: #F8F8F8;
+        border-radius: 1px;
+    }
     
     .photoreports-list li {
         margin-bottom: 45px;
@@ -1372,7 +1379,7 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
     
     .dropdown-wrap {
         position: absolute;
-        left: -31px;
+        left: -40px;
         top: 100%;
         padding-top: 3px;
         opacity: 0;
@@ -1382,14 +1389,14 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
     
     .dropdown {
         min-height: 140px;
-        padding: 32px 65px 0 35px;
+        padding: 32px 0 0 35px;
         line-height: 1.2;
         background-color: #fff;
         box-shadow: 0 5px 18px 0 rgba(0, 0, 0, 0.05);
         column-count: 2;
         column-gap: 0;
         li {
-            width: 207px;
+            width: 255px;
             margin-bottom: 35px;
             white-space: nowrap;
         }
@@ -1482,14 +1489,25 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
         align-self: center;
     }
     
-    .our-project-item {
-        padding-bottom: 23px;
-        border-bottom: 1px solid #E1F5F2;
-        display: flex;
-        align-self: flex-start;
-        &:not(:last-child) {
-            margin-bottom: 32px;
+    .our-project-list {
+        .swiper-wrapper {
+            flex-direction: column;
         }
+        .swiper-slide {
+            height: auto;
+            background-color: transparent;
+            padding-bottom: 23px;
+            border-bottom: 1px solid #E1F5F2;
+            align-self: flex-start;
+            &:not(:last-of-type) {
+                margin-bottom: 32px;
+            }
+        }
+    }
+    
+    .our-project-item {
+        text-align: left;
+        display: flex;
     }
     
     .footer-contacts li {
@@ -1523,6 +1541,10 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
 }
 
 @include from('xl') {
+    .last-news-title {
+        font-size: 17px;
+    }
+    
     .footer-nav {
         padding-left: 7%;
     }
@@ -1612,6 +1634,25 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
 }
 
 @include between('sm', 'md') {
+    .our-project-list {
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        .swiper-wrapper {
+            justify-content: space-between;
+        }
+        .swiper-slide {
+            width: calc(100% / 2 - 20px);
+            background-color: transparent;
+            align-items: flex-start;
+            &:first-of-type {
+                margin-right: 20px;
+            }
+            &:last-of-type {
+                display: none;
+            }
+        }
+    }
+    
     .partners-page-item br {
         display: none;
     }
