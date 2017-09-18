@@ -146,13 +146,6 @@ $(document).ready(function () {
     // END
 
 
-    $(".grid-text p").click(
-        function () {
-            $(this).parent().toggleClass("grid-more-opened");
-        }
-    );
-
-
     // BEGIN: Инициализация плагина для обрезки лишнего текст в блоках на главной
     $(".ellipsis").dotdotdot();
     $(".last-news-text").dotdotdot();
@@ -210,68 +203,72 @@ $(document).ready(function () {
     );
     //END
 
-    // функция проверки полной видимости элемента
-    var gridMore = $('.grid-more');
-    if (gridMore.length) {
-        function checkPosition() {
 
-            // координаты дива
-            var div_position = gridMore.offset();
-            // отступ сверху
-            var div_top = div_position.top;
-            // отступ слева
-            var div_left = div_position.left;
-            // ширина
-            var div_width = gridMore.width();
-            // высота
-            var div_height = gridMore.height();
 
-            // проскроллено сверху
-            var top_scroll = $(document).scrollTop();
-            // проскроллено слева
-            var left_scroll = $(document).scrollLeft();
-            // ширина видимой страницы
-            var screen_width = $(window).width();
-            // высота видимой страницы
-            var screen_height = $(window).height();
+    // Всплывашка для страницы members.html
+    var members = {
+        $main: $('.grid'),
+        w_main: 0,
+        init: function () {
+            var self = this;
+            var scrollTimeout;
 
-            // координаты углов видимой области
-            var see_x1 = left_scroll;
-            var see_x2 = screen_width + left_scroll;
-            var see_y1 = top_scroll;
-            var see_y2 = screen_height + top_scroll;
 
-            // координаты углов искомого элемента
-            var div_x1 = div_left;
-            var div_x2 = div_left + div_height;
-            var div_y1 = div_top;
-            var div_y2 = div_top + div_width;
+            $(window).resize(function () {
+                if (scrollTimeout) {
+                    clearTimeout(scrollTimeout);
+                    scrollTimeout = null;
+                }
+                scrollTimeout = setTimeout(function () {
+                    self.updateW();
+                }, 250);
+            });
 
-            // проверка - виден див полностью или нет
-            if (div_x1 >= see_x1 && div_x2 <= see_x2 && div_y1 >= see_y1 && div_y2 <= see_y2) {
-                // если виден
-                gridMore.addClass('grid-more-left');
-                gridMore.removeClass('grid-more-right');
-            } else {
-                // если не виден
-                gridMore.addClass('grid-more-right');
-                gridMore.removeClass('grid-more-left');
+
+            this.updateW();
+            this.$main.find(".grid-text").on('click', 'p', {self: this}, function (e) {
+                self = e.data.self;
+                $(this).parent().toggleClass("grid-more-opened");
+
+                var $el = $(this).closest('.grid-item'),
+                    $pops = $(this).parent().find('.grid-more'),
+                    w = {};
+
+                /*set coordinates*/
+                w.w_el = $el.outerWidth();
+                w.w_pops = $pops.outerWidth();
+                w.position_el = $el.position();
+                w.w_main = self.w_main;
+
+                self.positionW(w, $pops);
+
+            });
+
+        },
+        positionW: function (w, $pops) {
+
+            $pops.removeClass('grid-more-right').removeClass('grid-more-left');
+
+            if ((w.w_el + w.position_el.left + 1) >= w.w_main && w.w_main != w.w_el) {
+                $pops.addClass('grid-more-left');
+                return true
+            } else if ((w.w_el + w.position_el.left) < w.w_main) {
+                $pops.addClass('grid-more-right');
+                return true
             }
+
+            return false
+
+        },
+        updateW: function () {
+            this.w_main = this.$main.width();
         }
+    };
+    members.init();
 
-        $(document).scroll(function () {
-            // при скролле страницы делаем проверку
-            checkPosition();
-        });
-
-        // после загрузки страницы сразу проверяем
-        checkPosition();
-
-        // проверка при масштабировании и изменении размера страницы
-        $(window).resize(function () {
-            checkPosition();
-        });
-    }
+    $(window).resize(function () {
+        // checkPosition();
+    });
     //END
 
 
