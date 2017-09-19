@@ -25,6 +25,7 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
 @media (max-width: 1920px) {
     footer {
         background: url(../img/bg/bg-footer.jpg) no-repeat center;
+        background-size: cover;
     }
 }
 
@@ -280,8 +281,7 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
     }
     
     .logo {
-        max-width: 123px;
-        max-height: 50px;
+        max-width: 57px;
     }
     
     .search-top-close {
@@ -295,9 +295,6 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
     .footer-left {
         margin-bottom: 35px;
         text-align: center;
-        .logo {
-            margin: 0 auto 25px;
-        }
     }
     .footer-left-text {
         text-align: left;
@@ -1210,9 +1207,8 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
 }
 
 @include from('md') {
-    .logo {
-        max-width: 170px;
-        max-height: 65px;
+    header .logo {
+        max-width: 73px;
     }
     
     .partners-page-text {

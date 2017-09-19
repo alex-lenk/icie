@@ -132,9 +132,9 @@
         z-index: 50;
         transition: all .3s ease;
         @include SFProTextLight;
-    }
-    &:hover p {
-        color: #474CA6;
+        &:hover {
+            color: #474CA6;
+        }
     }
 }
 

@@ -185,7 +185,7 @@ $(document).ready(function () {
     });
 
 
-    // BEGIN: Для форм
+    // BEGIN: Для ошибок форм
     $(".ui-field").change(function () {
         if ($(this).val().trim().length) {
             $(this).parent().addClass("field-filled");
@@ -193,6 +193,7 @@ $(document).ready(function () {
             $(this).parent().removeClass("field-filled");
         }
     });
+    //END
 
 
     // BEGIN: Для открытия и закрытия форм на страницы контактов при маленьком разрешении экрана
