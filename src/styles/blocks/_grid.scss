@@ -139,33 +139,6 @@
     transition: all .3s ease;
 }
 
-.grid-more-left {
-    right: 100%;
-    transform: translate(-40px, -50%);
-    &::before, &::after {
-        right: -20px;
-        border-left-color: #fff;
-    }
-    &::before {
-        border-left-color: rgba(71, 76, 166, 0.20);
-    }
-}
-
-.grid-more-right {
-    left: 100%;
-    transform: translate(40px, -50%);
-    &::before, &::after {
-        left: -20px;
-        right: auto;
-        border-right-color: #fff;
-        border-left-color: transparent;
-    }
-    &::before {
-        border-right-color: rgba(71, 76, 166, 0.20);
-        border-left-color: transparent;
-    }
-}
-
 .grid-more-persona {
     margin-bottom: 6px;
     font-size: 14px;

@@ -284,7 +284,7 @@ $(document).ready(function () {
     // BEGIN: Инициализация плагина для разбиении блоков
     var $grid = $('.grid');
 
-    if ($windowInnerWidth > 768 && $ourProjectList.length) {
+    if ($windowInnerWidth > 768 && $grid.length) {
         $grid.masonry({
             itemSelector: '.grid-item'
         });
