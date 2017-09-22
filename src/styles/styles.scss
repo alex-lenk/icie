@@ -31,6 +31,10 @@
 @import "blocks/notification";
 @import "blocks/view-section";
 
+.member-page {
+    overflow: hidden;
+}
+
 .back-listing {
     position: relative;
     display: flex;

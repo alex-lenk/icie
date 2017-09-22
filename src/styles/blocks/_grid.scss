@@ -1,6 +1,4 @@
 .grid {
-    margin-left: -20px;
-    margin-right: -20px;
     display: flex;
     svg {
         display: none;
@@ -95,7 +93,6 @@
 }
 
 .grid-title {
-    min-height: 40px;
     line-height: 20px;
     padding-left: 42px;
     font-size: 17px;
@@ -118,7 +115,6 @@
 
 .grid-item {
     position: relative;
-    padding: 20px;
 }
 
 .grid-text {
@@ -139,22 +135,8 @@
 }
 
 .grid-more {
-    width: 291px;
-    padding: 14px 17px 13px;
-    top: 50%;
-    background: #fff;
-    z-index: -1;
-    position: absolute;
     opacity: 0;
     transition: all .3s ease;
-    box-shadow: 0 5px 18px 0 rgba(71, 76, 166, 0.2);
-    &::before, &::after {
-        top: 50%;
-        transform: translateY(-50%);
-        position: absolute;
-        content: '';
-        border: 10px solid transparent;
-    }
 }
 
 .grid-more-left {

@@ -178,13 +178,6 @@ $(document).ready(function () {
     /* END */
 
 
-    // BEGIN: Инициализация плагина для разбиении блоков
-    $('.grid').masonry({
-        // options
-        itemSelector: '.grid-item'
-    });
-
-
     // BEGIN: Для ошибок форм
     $(".ui-field").change(function () {
         if ($(this).val().trim().length) {
@@ -283,6 +276,17 @@ $(document).ready(function () {
             slidesPerView: 'auto',
             centeredSlides: true,
             grabCursor: true
+        });
+    }
+    // END
+
+
+    // BEGIN: Инициализация плагина для разбиении блоков
+    var $grid = $('.grid');
+
+    if ($windowInnerWidth > 768 && $ourProjectList.length) {
+        $grid.masonry({
+            itemSelector: '.grid-item'
         });
     }
     // END

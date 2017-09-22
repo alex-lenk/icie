@@ -284,6 +284,31 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
         max-width: 57px;
     }
     
+    .grid {
+        flex-direction: column;
+    }
+    .grid-item {
+        margin-bottom: 30px;
+    }
+    .grid-item-wrap {
+        padding-bottom: 12px;
+    }
+    .grid-text p {
+        margin-bottom: 0;
+    }
+    .grid-more {
+        width: 100%;
+        height: 0;
+        position: relative;
+        overflow: hidden;
+    }
+    .grid-more-persona {
+        padding-top: 10px;
+    }
+    .grid-more-opened .grid-more {
+        height: 100%;
+    }
+    
     .search-top-close {
         top: 18px;
     }
@@ -1164,10 +1189,6 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
 }
 
 @include from('sm') {
-    .grid-item {
-        width: 50%;
-    }
-    
     .our-project-list {
         background: #F8F8F8;
         border-radius: 1px;
@@ -1207,6 +1228,31 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
 }
 
 @include from('md') {
+    .grid {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+    .grid-item {
+        width: 50%;
+        padding: 20px;
+    }
+    .grid-more {
+        width: 291px;
+        padding: 14px 17px 13px;
+        top: 50%;
+        z-index: -1;
+        position: absolute;
+        background: #fff;
+        box-shadow: 0 5px 18px 0 rgba(71, 76, 166, 0.2);
+        &::before, &::after {
+            top: 50%;
+            transform: translateY(-50%);
+            position: absolute;
+            content: '';
+            border: 10px solid transparent;
+        }
+    }
+    
     header .logo {
         max-width: 73px;
     }
@@ -1451,6 +1497,7 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
     }
     
     .header-content {
+        max-width: 700px;
         padding-top: 65px;
     }
     
