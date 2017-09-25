@@ -23,9 +23,9 @@ body {
 }
 
 a, .as-link {
-    color: #390050;
+    color: #474CA6;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
     &:hover {
         color: #474CA6;
     }
@@ -222,4 +222,16 @@ button, input, select, textarea {
 .alignleft {
     float: left;
     margin: 15px 15px 15px 0;
+}
+
+.first-face-title, .land-link, .last-news-title, .our-project-title, .interview-title, .side-all {
+    a:not(:hover) {
+        color: #390050;
+    }
+}
+
+.view-section, .read-more, .home-info-all {
+    &:not(:hover) {
+        color: #390050;
+    }
 }

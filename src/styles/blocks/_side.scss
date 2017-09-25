@@ -15,10 +15,15 @@
             display: inline;
             position: relative;
             content: '››';
+            color: #390050;
             transition: all 0.3s ease;
+        }
+        &:not(:hover) {
+            color: #2F2732;
         }
         &:hover::before {
             left: -9px;
+            color: #474CA6;
         }
     }
 }

@@ -61,17 +61,31 @@ body {
   flex-direction: column;
 }
 
-a, .as-link {
+a {
+  color: #474CA6;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #474CA6;
+}
+
+a:focus {
+  outline: none;
+}
+
+.as-link {
   color: #390050;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-a:hover, .as-link:hover {
+.as-link:hover {
   color: #474CA6;
 }
 
-a:focus, .as-link:focus {
+.as-link:focus {
   outline: none;
 }
 
@@ -2430,6 +2444,10 @@ footer .logo {
   font-size: 17px;
   color: #390050;
   font-family: 'SFProDisplay-Medium', Helvetica, Arial, sans-serif;
+}
+
+.footer-left-text {
+  text-align: center
 }
 
 .partners-page-item {
